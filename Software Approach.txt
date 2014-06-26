@@ -1,0 +1,42 @@
+This project will contain at minimum 800 LED's. These LED's consist of WS2812's since they are individually addressable, and can be put in a string. For this, there will be 8 strings of 100 LED's. For this reason one port of a PIC18F4550 will be used.
+
+The port that will be used is PORTD. PORTD is used since PORTB is used for button interrupts, needed for the external switches.
+
+From a software perspective, all that needs to be done is to send bit streams via PORTD, and then compute tetris. The following section will be dedicated to the plan on how to get the WS2812b's working.
+
+//********************************************
+//*************LED Segment********************
+//********************************************
+
+For the bit timings for the WS2812B, it goes as follows:
+0 bit: 0.40us HI, 0.85us LO
+1 bit: 0.80us HI, 0.45us LO, 
+Each bit timing is +/- 0.15us
+RES:  50us
+
+The RES signal is defined as the in between timing for ending of sending data. So after a long string of 24 bit segments are sent; >50us must be waited before another color can be set for each LED.
+
+In order for consistancies sake, and more accurate timing; the timing will be relaxed in order to provide more direct timing. Here is how it will be used.
+
+0 bit: 0.40us HI, 0.80us LO
+1 bit: 0.80us HI, 0.40us LO, 
+Each bit timing is +/- 0.15us
+RES:  50us
+
+This approach is considered accurate since it removes 0.05us of timing, which is well within this requirement.  This however means that it must be more precise when written.
+
+This will be accomplished by running this segment directly through; without stopping for any other segment.
+
+
+To send the stream of bits, a 100 d-word (uint32_t) array will be used. It is 8 bits too long for each color, since there is 8-bits associated with each color in the order of:G,R,B.
+
+The total time to run the WS2812b code will be as such:
+
+Each bit will take:					1.2us
+Each LED will take:					28.8us
+Each string of 100 will take:		2.93ms (with the 50us reset time)
+
+
+//********************************************
+//*************Tetris Play********************
+//********************************************
