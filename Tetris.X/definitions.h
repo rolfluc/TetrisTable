@@ -17,6 +17,10 @@ extern "C" {
 
     #define clockSpeed 48000000
 
+    #define LED_LENGTH 5
+    #define LED_COLOR_LENGTH 24
+    #define TOTAL_BYTE_LENGTH LED_LENGTH * LED_COLOR_LENGTH
+
 
 
 #ifdef	__cplusplus

@@ -14,9 +14,8 @@
 extern "C" {
 #endif
 
-    void highBit(uint8_t whichPortBBit, uint8_t bitPolarity);
-    void lowBit(uint8_t whichPortBBit, uint8_t bitPolarity);
-    void wait50ns(void);
+    void send_board(void);
+    void wait(uint16_t wait_time);
 
 
 #ifdef	__cplusplus

@@ -10,3 +10,8 @@ void pinSetup(void)
 {
     TRISB = 0x00;
 }
+
+void tmr1Setup(void)
+{
+    T1CON = 0b11111000;
+}

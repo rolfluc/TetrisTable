@@ -11,10 +11,18 @@
 #pragma config FCMEN = ON
 
 
+uint8_t block_coding[TOTAL_BYTE_LENGTH];
+
+
 void setup(void)
 {
-    clockSetup();
-    pinSetup();
+    //Clear up/initialize the LED Block
+    for (uint8_t index = 0; index < TOTAL_BYTE_LENGTH; index++)
+    {
+        block_coding[index] = 0;
+    }
+    //clockSetup();
+    //pinSetup();
 }
 
 
@@ -23,44 +31,35 @@ void setup(void)
  */
 void main(void)
 {
-    //setup();
-    lowBit(0xff,0x01);
-}
-
-    //0 bit: 0.40us HI, 0.85us LO
-    //1 bit: 0.80us HI, 0.45us LO, each timing is +/- 0.15us
-
-void lowBit(uint8_t whichPortBBit, uint8_t bitPolarity)
-{
-    TRISB = whichPortBBit;
-    PORTB = 0x00;
-    switch(bitPolarity)
+    setup();
+    while(1)
     {
-        //Sending the LO signal of a 0 bit, wait for 0.7us-1.0us
-        case 0:
-            
-            break;
-        //Sending the LO signal of a 1 bit, wait for 0.3us-.6us
-        case 1:
-            break;
-        default:
-            break;
-    }
-}
-void highBit(uint8_t whichPortBBit, uint8_t bitPolarity)
-{
-    TRISB = whichPortBBit;
-    PORTB = 0xff;
-    switch(bitPolarity)
-    {
-        //Sending the HI signal of a 0 bit, wait for 0.7us-1.0us
-        case 0:
-            break;
-        //Sending the HI signal of a 1 bit, wait for 0.7us-1.0us
-        case 1:
-            break;
-        default:
-            break;
+        send_board();
     }
 }
 
+    //0 bit: 0.40us HI, 0.80us LO
+    //1 bit: 0.80us HI, 0.40us LO,
+    //each timing is +/- 0.10us
+    //res:  50us
+
+void send_board(void)
+{
+    TRISD = 0x00;
+    for (uint8_t index =0; index < TOTAL_BYTE_LENGTH; index++)
+    {
+        PORTB = 0xff;
+        //wait 400ns
+        PORTB = block_coding[index];
+        //wait 400ns
+        PORTB = 0x00;
+        //wait 400ns, start again
+    }
+    //wait 50us
+}
+// measured in
+void wait(uint16_t wait_time)
+{
+    T1CONbits.TMR1ON = 1;
+    //use a timer interrupt for more accurate timing
+}
