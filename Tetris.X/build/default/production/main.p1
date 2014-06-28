@@ -1,13 +1,9 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"15 setupFunctions.h
-[v _clockSetup `(v ~T0 @X0 0 ef ]
-"16
-[v _pinSetup `(v ~T0 @X0 0 ef ]
 [p mainexit ]
-"18 mainFunctions.h
-[v _lowBit `(v ~T0 @X0 0 ef2`uc`uc ]
-"4168 E:\Microchip\xc8\v1.21\include\pic18f4550.h
-[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"17 mainFunctions.h
+[v _send_board `(v ~T0 @X0 0 ef ]
+"4560 E:\Microchip\xc8\v1.21\include\pic18f4550.h
+[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
 "2722
 [v _PORTB `Vuc ~T0 @X0 0 e@3969 ]
 [; ;pic18f4550.h: 44: extern volatile unsigned char SPPDATA @ 0xF62;
@@ -4896,9 +4892,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdlib.h: 112: extern char * ftoa(float f, int * status);
 [; ;setupFunctions.h: 15: void clockSetup(void);
 [; ;setupFunctions.h: 16: void pinSetup(void);
-[; ;mainFunctions.h: 17: void highBit(unsigned char whichPortBBit, unsigned char bitPolarity);
-[; ;mainFunctions.h: 18: void lowBit(unsigned char whichPortBBit, unsigned char bitPolarity);
-[; ;mainFunctions.h: 19: void wait50ns(void);
+[; ;mainFunctions.h: 17: void send_board(void);
+[; ;mainFunctions.h: 18: void wait(unsigned short int wait_time);
 "8 main.c
 [p x FOSC=ECPLLIO_EC ]
 [p x PLLDIV=12 ]
@@ -4917,141 +4912,176 @@ Version 3.2 HI-TECH Software Intermediate Code
 "11
 [p x FCMEN=ON ]
 "14
+[v _block_coding `uc ~T0 @X0 * -> 5 `i -> 24 `i e ]
+[; ;main.c: 14: unsigned char block_coding[5 * 24];
+"18
 [v _setup `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 13: void setup(void)
-[; ;main.c: 14: {
+[; ;main.c: 17: void setup(void)
+[; ;main.c: 18: {
 [e :U _setup ]
 [f ]
-[; ;main.c: 15: clockSetup();
-"15
-[e ( _clockSetup ..  ]
-[; ;main.c: 16: pinSetup();
-"16
-[e ( _pinSetup ..  ]
-[; ;main.c: 17: }
-"17
+[; ;main.c: 20: for (unsigned char index = 0; index < 5 * 24; index++)
+"20
+{
+[v _index `uc ~T0 @X0 1 a ]
+[e = _index -> -> 0 `i `uc ]
+[e $ < -> _index `i * -> 5 `i -> 24 `i 599  ]
+[e $U 600  ]
+"21
+[e :U 599 ]
+[; ;main.c: 21: {
+{
+[; ;main.c: 22: block_coding[index] = 0;
+"22
+[e = *U + &U _block_coding * -> _index `ux -> -> # *U &U _block_coding `ui `ux -> -> 0 `i `uc ]
+"23
+}
+"20
+[e ++ _index -> -> 1 `i `uc ]
+[e $ < -> _index `i * -> 5 `i -> 24 `i 599  ]
+[e :U 600 ]
+"23
+}
+[; ;main.c: 23: }
+[; ;main.c: 26: }
+"26
 [e :UE 598 ]
 }
-"24
+"33
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 23: void main(void)
-[; ;main.c: 24: {
+[; ;main.c: 32: void main(void)
+[; ;main.c: 33: {
 [e :U _main ]
 [f ]
-[; ;main.c: 26: lowBit(0xff,0x01);
-"26
-[e ( _lowBit (2 , -> -> 255 `i `uc -> -> 1 `i `uc ]
-[; ;main.c: 27: }
-"27
-[e :UE 599 ]
-}
-"33
-[v _lowBit `(v ~T0 @X0 1 ef2`uc`uc ]
-{
-[; ;main.c: 32: void lowBit(unsigned char whichPortBBit, unsigned char bitPolarity)
-[; ;main.c: 33: {
-[e :U _lowBit ]
-[v _whichPortBBit `uc ~T0 @X0 1 r1 ]
-[v _bitPolarity `uc ~T0 @X0 1 r2 ]
-[f ]
-[; ;main.c: 34: TRISB = whichPortBBit;
+[; ;main.c: 34: setup();
 "34
-[e = _TRISB _whichPortBBit ]
-[; ;main.c: 35: PORTB = 0x00;
+[e ( _setup ..  ]
+[; ;main.c: 35: while(1)
 "35
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;main.c: 36: switch(bitPolarity)
-"36
-[e $U 602  ]
-[; ;main.c: 37: {
-"37
-{
-[; ;main.c: 38: case 0:
-"38
-[e :U 603 ]
-[; ;main.c: 39: break;
-"39
-[e $U 601  ]
-[; ;main.c: 40: case 1:
-"40
 [e :U 604 ]
-[; ;main.c: 41: break;
-"41
-[e $U 601  ]
-[; ;main.c: 42: default:
-"42
-[e :U 605 ]
-[; ;main.c: 43: break;
-"43
-[e $U 601  ]
-"44
-}
-[; ;main.c: 44: }
-[e $U 601  ]
+[; ;main.c: 36: {
 "36
-[e :U 602 ]
-[e [\ _bitPolarity , $ -> -> 0 `i `uc 603
- , $ -> -> 1 `i `uc 604
- 605 ]
-"44
-[e :U 601 ]
-[; ;main.c: 45: }
-"45
-[e :UE 600 ]
-}
-"47
-[v _highBit `(v ~T0 @X0 1 ef2`uc`uc ]
 {
-[; ;main.c: 46: void highBit(unsigned char whichPortBBit, unsigned char bitPolarity)
-[; ;main.c: 47: {
-[e :U _highBit ]
-[v _whichPortBBit `uc ~T0 @X0 1 r1 ]
-[v _bitPolarity `uc ~T0 @X0 1 r2 ]
+[; ;main.c: 37: send_board();
+"37
+[e ( _send_board ..  ]
+"38
+}
+[e :U 603 ]
+"35
+[e $U 604  ]
+[e :U 605 ]
+[; ;main.c: 38: }
+[; ;main.c: 39: }
+"39
+[e :UE 602 ]
+}
+"50
+[v _send_board `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 49: void send_board(void)
+[; ;main.c: 50: {
+[e :U _send_board ]
 [f ]
-[; ;main.c: 48: TRISB = whichPortBBit;
-"48
-[e = _TRISB _whichPortBBit ]
-[; ;main.c: 49: PORTB = 0xff;
-"49
-[e = _PORTB -> -> 255 `i `uc ]
-[; ;main.c: 50: switch(bitPolarity)
-"50
-[e $U 608  ]
-[; ;main.c: 51: {
+[; ;main.c: 51: TRISD = 0x00;
 "51
-{
-[; ;main.c: 52: case 0:
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;main.c: 52: for (unsigned char index =0; index < 5 * 24; index++)
 "52
-[e :U 609 ]
-[; ;main.c: 53: break;
+{
+[v _index `uc ~T0 @X0 1 a ]
+[e = _index -> -> 0 `i `uc ]
+[e $ < -> _index `i * -> 5 `i -> 24 `i 607  ]
+[e $U 608  ]
 "53
-[e $U 607  ]
-[; ;main.c: 54: case 1:
-"54
-[e :U 610 ]
-[; ;main.c: 55: break;
-"55
-[e $U 607  ]
-[; ;main.c: 56: default:
-"56
-[e :U 611 ]
-[; ;main.c: 57: break;
-"57
-[e $U 607  ]
-"58
-}
-[; ;main.c: 58: }
-[e $U 607  ]
-"50
-[e :U 608 ]
-[e [\ _bitPolarity , $ -> -> 0 `i `uc 609
- , $ -> -> 1 `i `uc 610
- 611 ]
-"58
 [e :U 607 ]
-[; ;main.c: 59: }
+[; ;main.c: 53: {
+{
+[; ;main.c: 54: PORTB = 0xff;
+"54
+[e = _PORTB -> -> 255 `i `uc ]
+[; ;main.c: 55: asm("nop");
+"55
+[; <" nop ;# ">
+[; ;main.c: 56: asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
+"56
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; ;main.c: 58: PORTB = block_coding[index];
+"58
+[e = _PORTB *U + &U _block_coding * -> _index `ux -> -> # *U &U _block_coding `ui `ux ]
+[; ;main.c: 59: asm("nop");
 "59
+[; <" nop ;# ">
+[; ;main.c: 60: asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
+"60
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; ;main.c: 62: PORTB = 0x00;
+"62
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;main.c: 63: asm("nop");
+"63
+[; <" nop ;# ">
+[; ;main.c: 64: asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
+"64
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+[; <" nop ;# ">
+"65
+}
+"52
+[e ++ _index -> -> 1 `i `uc ]
+[e $ < -> _index `i * -> 5 `i -> 24 `i 607  ]
+[e :U 608 ]
+"65
+}
+"66
+[v _wait_time `us ~T0 @X0 1 a ]
+[; ;main.c: 65: }
+[; ;main.c: 66: unsigned short int wait_time = 299;
+[e = _wait_time -> -> 299 `i `us ]
+[; ;main.c: 67: while (wait_time) wait_time--;
+"67
+[e $U 610  ]
+[e :U 611 ]
+[e -- _wait_time -> -> 1 `i `us ]
+[e :U 610 ]
+[e $ != -> _wait_time `ui -> -> -> 0 `i `us `ui 611  ]
+[e :U 612 ]
+[; ;main.c: 68: }
+"68
 [e :UE 606 ]
 }

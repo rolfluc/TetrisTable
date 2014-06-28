@@ -6427,9 +6427,8 @@ void clockSetup(void);
 void pinSetup(void);
 
 # 17 "mainFunctions.h"
-void highBit(unsigned char whichPortBBit, unsigned char bitPolarity);
-void lowBit(unsigned char whichPortBBit, unsigned char bitPolarity);
-void wait50ns(void);
+void send_board(void);
+void wait(unsigned short int wait_time);
 
 
 # 8 "main.c"
@@ -6438,48 +6437,49 @@ void wait50ns(void);
 #pragma config LVP=OFF, MCLRE=ON, PBADEN=OFF, STVREN=ON
 #pragma config FCMEN = ON
 
+
+unsigned char block_coding[5 * 24];
+
+
 void setup(void)
 {
-clockSetup();
-pinSetup();
+
+for (unsigned char index = 0; index < 5 * 24; index++)
+{
+block_coding[index] = 0;
 }
 
-# 23
+
+}
+
+# 32
 void main(void)
 {
-
-lowBit(0xff,0x01);
-}
-
-
-
-
-void lowBit(unsigned char whichPortBBit, unsigned char bitPolarity)
+setup();
+while(1)
 {
-TRISB = whichPortBBit;
-PORTB = 0x00;
-switch(bitPolarity)
-{
-case 0:
-break;
-case 1:
-break;
-default:
-break;
+send_board();
 }
 }
-void highBit(unsigned char whichPortBBit, unsigned char bitPolarity)
+
+# 49
+void send_board(void)
 {
-TRISB = whichPortBBit;
+TRISD = 0x00;
+for (unsigned char index =0; index < 5 * 24; index++)
+{
 PORTB = 0xff;
-switch(bitPolarity)
-{
-case 0:
-break;
-case 1:
-break;
-default:
-break;
-}
-}
+asm("nop");
+asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
 
+PORTB = block_coding[index];
+asm("nop");
+asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
+
+PORTB = 0x00;
+asm("nop");
+asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
+}
+unsigned short int wait_time = 299;
+while (wait_time) wait_time--;
+}

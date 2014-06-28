@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.21 build 54009 
-                                                                                               Wed May 28 11:12:52 2014
+                                                                                               Fri Jun 27 19:59:47 2014
 
 Microchip Technology Omniscient Code Generator (Lite mode) build 54009
      1                           	processor	18F4550
@@ -10,208 +10,394 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 54009
      4                           	opt	lm
      5                           	psect	text0,global,reloc=2,class=CODE,delta=1
      6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
-     7                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
-     8                           	psect	text1,global,reloc=2,class=CODE,delta=1
-     9                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
-    10                           	psect	rparam,global,class=COMRAM,space=1,delta=1
-    11  0000                     _OSCCON	set	4051
-    12  0000                     _OSCTUNE	set	3995
-    13  0000                     _PORTB	set	3969
-    14  0000                     _TRISB	set	3987
-    15                           
-    16 ;;
-    17 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
-    18 ;;
-    19 ;; *************** function _main *****************
-    20 ;; Defined at:
-    21 ;;		line 24 in file "main.c"
-    22 ;; Parameters:    Size  Location     Type
-    23 ;;		None
-    24 ;; Auto vars:     Size  Location     Type
-    25 ;;		None
-    26 ;; Return value:  Size  Location     Type
-    27 ;;		None               void
-    28 ;; Registers used:
-    29 ;;		wreg, status,2, status,0, cstack
-    30 ;; Tracked objects:
-    31 ;;		On entry : 0/0
-    32 ;;		On exit  : 0/0
-    33 ;;		Unchanged: 0/0
-    34 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-    35 ;;      Params:         0       0       0       0       0       0       0       0       0
-    36 ;;      Locals:         0       0       0       0       0       0       0       0       0
-    37 ;;      Temps:          2       0       0       0       0       0       0       0       0
-    38 ;;      Totals:         2       0       0       0       0       0       0       0       0
-    39 ;;Total ram usage:        2 bytes
-    40 ;; Hardware stack levels required when called:    1
-    41 ;; This function calls:
-    42 ;;		_lowBit
-    43 ;; This function is called by:
-    44 ;;		Startup code after reset
-    45 ;; This function uses a non-reentrant model
-    46 ;;
-    47                           
-    48                           	psect	text0
-    49  007FE8                     __ptext0:
-    50                           	opt stack 0
-    51                           
-    52                           ; #config settings
-    53  007FE8                     _main:
-    54                           	opt stack 30
-    55                           
-    56                           ;main.c: 26: lowBit(0xff,0x01);
+     7                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+     9                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    10                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    11                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    12                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    13  0000                     _OSCCON	set	4051
+    14  0000                     _OSCTUNE	set	3995
+    15  0000                     _PORTB	set	3969
+    16  0000                     _T1CON	set	4045
+    17  0000                     _TRISB	set	3987
+    18  0000                     _TRISD	set	3989
+    19                           
+    20                           ; 0 bytes @ 0x4
+    21 ;;
+    22 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+    23 ;;
+    24 ;; *************** function _main *****************
+    25 ;; Defined at:
+    26 ;;		line 33 in file "main.c"
+    27 ;; Parameters:    Size  Location     Type
+    28 ;;		None
+    29 ;; Auto vars:     Size  Location     Type
+    30 ;;		None
+    31 ;; Return value:  Size  Location     Type
+    32 ;;		None               void
+    33 ;; Registers used:
+    34 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+    35 ;; Tracked objects:
+    36 ;;		On entry : 0/0
+    37 ;;		On exit  : 0/0
+    38 ;;		Unchanged: 0/0
+    39 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+    40 ;;      Params:         0       0       0       0       0       0       0       0       0
+    41 ;;      Locals:         0       0       0       0       0       0       0       0       0
+    42 ;;      Temps:          0       0       0       0       0       0       0       0       0
+    43 ;;      Totals:         0       0       0       0       0       0       0       0       0
+    44 ;;Total ram usage:        0 bytes
+    45 ;; Hardware stack levels required when called:    1
+    46 ;; This function calls:
+    47 ;;		_setup
+    48 ;;		_send_board
+    49 ;; This function is called by:
+    50 ;;		Startup code after reset
+    51 ;; This function uses a non-reentrant model
+    52 ;;
+    53                           
+    54                           	psect	text0
+    55  007F18                     __ptext0:
+    56                           	opt stack 0
     57                           
-    58                           ;incstack = 0
-    59                           ;incstack = 0
-    60  007FE8  6E03               	movwf	??_main& (0+255),c
-    61  007FEA  0EFF               	movlw	255
-    62  007FEC  6E01               	movwf	?_lowBit,c
-    63  007FEE  5003               	movf	??_main& (0+255),w,c
-    64  007FF0  6E04               	movwf	(??_main+1)& (0+255),c
-    65  007FF2  0E01               	movlw	1
-    66  007FF4  6E02               	movwf	?_lowBit+1,c
-    67  007FF6  5004               	movf	(??_main+1)& (0+255),w,c
-    68  007FF8  ECEB  F03F         	call	_lowBit	;wreg free
-    69  007FFC  EF00  F000         	goto	start
-    70  008000                     __end_of_main:
-    71                           	opt stack 0
-    72                           
-    73                           	psect	cinit
-    74  007FCC                     __pcinit:
-    75                           	opt stack 0
-    76  007FCC                     start_initialization:
-    77                           	opt stack 0
-    78  007FCC                     __initialization:
-    79                           	opt stack 0
-    80  007FCC                     end_of_initialization:
-    81                           	opt stack 0
-    82  007FCC                     __end_of__initialization:
-    83                           	opt stack 0
-    84  007FCC  0E00               	movlw	low (__Lmediumconst shr (0+16))
-    85  007FCE  6EF8               	movwf	tblptru,c
-    86  007FD0  0100               	movlb	0
-    87  007FD2  EFF4  F03F         	goto	_main	;jump to C main() function
-    88                           tblptru	equ	0xFF8
-    89                           
-    90                           	psect	cstackCOMRAM
-    91  000001                     __pcstackCOMRAM:
+    58                           ; #config settings
+    59  007F18                     _main:
+    60                           	opt stack 30
+    61                           
+    62                           ;main.c: 34: setup();
+    63                           
+    64                           ;incstack = 0
+    65                           ;incstack = 0
+    66  007F18  EC9A  F03F         	call	_setup	;wreg free
+    67  007F1C                     l16:
+    68                           
+    69                           ;main.c: 36: {
+    70                           ;main.c: 37: send_board();
+    71  007F1C  ECB0  F03F         	call	_send_board	;wreg free
+    72  007F20  D7FD               	goto	l16
+    73  007F22                     __end_of_main:
+    74                           	opt stack 0
+    75                           
+    76                           	psect	cinit
+    77  007F22                     __pcinit:
+    78                           	opt stack 0
+    79  007F22                     start_initialization:
+    80                           	opt stack 0
+    81  007F22                     __initialization:
+    82                           	opt stack 0
+    83                           
+    84                           ; Clear objects allocated to BANK0 (120 bytes)
+    85  007F22  EE00  F060         	lfsr	0,__pbssBANK0
+    86  007F26  0E78               	movlw	120
+    87  007F28                     clear_0:
+    88  007F28  6AEE               	clrf	postinc0,c
+    89  007F2A  06E8               	decf	wreg,f,c
+    90  007F2C  E1FD               	bnz	clear_0
+    91  007F2E                     end_of_initialization:
     92                           	opt stack 0
-    93  000001                     ?_lowBit:
+    93  007F2E                     __end_of__initialization:
     94                           	opt stack 0
-    95  000001                     lowBit@whichPortBBit:
-    96                           	opt stack 0
-    97                           
-    98                           ; 1 bytes @ 0x0
-    99  000001                     	ds	1
-   100  000002                     lowBit@bitPolarity:
-   101                           	opt stack 0
-   102                           
-   103                           ; 1 bytes @ 0x1
-   104  000002                     	ds	1
-   105  000003                     ??_main:
-   106                           
-   107                           ; 0 bytes @ 0x2
-   108  000003                     	ds	2
-   109                           tblptru	equ	0xFF8
-   110                           
-   111 ;; *************** function _lowBit *****************
-   112 ;; Defined at:
-   113 ;;		line 33 in file "main.c"
-   114 ;; Parameters:    Size  Location     Type
-   115 ;;  whichPortBBi    1    0[COMRAM] unsigned char 
-   116 ;;  bitPolarity     1    1[COMRAM] unsigned char 
-   117 ;; Auto vars:     Size  Location     Type
-   118 ;;		None
-   119 ;; Return value:  Size  Location     Type
-   120 ;;		None               void
-   121 ;; Registers used:
-   122 ;;		wreg, status,2, status,0
-   123 ;; Tracked objects:
-   124 ;;		On entry : 0/0
-   125 ;;		On exit  : 0/0
-   126 ;;		Unchanged: 0/0
-   127 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-   128 ;;      Params:         2       0       0       0       0       0       0       0       0
-   129 ;;      Locals:         0       0       0       0       0       0       0       0       0
-   130 ;;      Temps:          0       0       0       0       0       0       0       0       0
-   131 ;;      Totals:         2       0       0       0       0       0       0       0       0
-   132 ;;Total ram usage:        2 bytes
-   133 ;; Hardware stack levels used:    1
-   134 ;; This function calls:
-   135 ;;		Nothing
-   136 ;; This function is called by:
-   137 ;;		_main
-   138 ;; This function uses a non-reentrant model
-   139 ;;
-   140                           
-   141                           	psect	text1
-   142  007FD6                     __ptext1:
-   143                           	opt stack 0
-   144  007FD6                     _lowBit:
-   145                           	opt stack 30
-   146                           
-   147                           ;main.c: 34: TRISB = whichPortBBit;
-   148                           
-   149                           ;incstack = 0
-   150                           ;incstack = 0
-   151  007FD6  C001  FF93         	movff	lowBit@whichPortBBit,3987	;volatile
-   152                           
-   153                           ;main.c: 35: PORTB = 0x00;
-   154  007FDA  0E00               	movlw	0
-   155  007FDC  6E81               	movwf	3969,c	;volatile
-   156                           
-   157                           ;main.c: 44: }
-   158                           
-   159                           ;main.c: 43: break;
-   160                           
-   161                           ;main.c: 42: default:
-   162                           
-   163                           ;main.c: 41: break;
-   164                           
-   165                           ;main.c: 40: case 1:
-   166                           
-   167                           ;main.c: 39: break;
-   168                           
-   169                           ;main.c: 37: {
-   170                           ;main.c: 38: case 0:
-   171                           
-   172                           ;main.c: 36: switch(bitPolarity)
-   173  007FDE  5002               	movf	lowBit@bitPolarity,w,c
+    95  007F2E  0100               	movlb	0
+    96  007F30  EF8C  F03F         	goto	_main	;jump to C main() function
+    97                           postinc0	equ	0xFEE
+    98                           wreg	equ	0xFE8
+    99                           
+   100                           	psect	bssBANK0
+   101  000060                     __pbssBANK0:
+   102                           	opt stack 0
+   103  000060                     _block_coding:
+   104                           	opt stack 0
+   105  000060                     	ds	120
+   106                           postinc0	equ	0xFEE
+   107                           wreg	equ	0xFE8
+   108                           
+   109                           	psect	cstackCOMRAM
+   110  000001                     __pcstackCOMRAM:
+   111                           	opt stack 0
+   112  000001                     ??_send_board:
+   113  000001                     ??_setup:
+   114  000001                     
+   115                           ; 0 bytes @ 0x0
+   116  000001                     	ds	1
+   117  000002                     setup@index:
+   118                           	opt stack 0
+   119  000002                     send_board@wait_time:
+   120                           	opt stack 0
+   121                           
+   122                           ; 2 bytes @ 0x1
+   123  000002                     	ds	2
+   124  000004                     send_board@index:
+   125                           	opt stack 0
+   126                           
+   127                           ; 1 bytes @ 0x3
+   128  000004                     	ds	1
+   129  000005                     postinc0	equ	0xFEE
+   130                           wreg	equ	0xFE8
+   131                           
+   132 ;; *************** function _send_board *****************
+   133 ;; Defined at:
+   134 ;;		line 50 in file "main.c"
+   135 ;; Parameters:    Size  Location     Type
+   136 ;;		None
+   137 ;; Auto vars:     Size  Location     Type
+   138 ;;  index           1    3[COMRAM] unsigned char 
+   139 ;;  wait_time       2    1[COMRAM] unsigned short 
+   140 ;; Return value:  Size  Location     Type
+   141 ;;		None               void
+   142 ;; Registers used:
+   143 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh
+   144 ;; Tracked objects:
+   145 ;;		On entry : 0/0
+   146 ;;		On exit  : 0/0
+   147 ;;		Unchanged: 0/0
+   148 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   149 ;;      Params:         0       0       0       0       0       0       0       0       0
+   150 ;;      Locals:         3       0       0       0       0       0       0       0       0
+   151 ;;      Temps:          1       0       0       0       0       0       0       0       0
+   152 ;;      Totals:         4       0       0       0       0       0       0       0       0
+   153 ;;Total ram usage:        4 bytes
+   154 ;; Hardware stack levels used:    1
+   155 ;; This function calls:
+   156 ;;		Nothing
+   157 ;; This function is called by:
+   158 ;;		_main
+   159 ;; This function uses a non-reentrant model
+   160 ;;
+   161                           
+   162                           	psect	text1
+   163  007F60                     __ptext1:
+   164                           	opt stack 0
+   165  007F60                     _send_board:
+   166                           	opt stack 30
+   167                           
+   168                           ;main.c: 51: TRISD = 0x00;
+   169                           
+   170                           ;incstack = 0
+   171                           ;incstack = 0
+   172  007F60  0E00               	movlw	0
+   173  007F62  6E95               	movwf	3989,c	;volatile
    174                           
-   175                           ; Switch size 1, requested type "space"
-   176                           ; Number of cases is 2, Range of values is 0 to 1
-   177                           ; switch strategies available:
-   178                           ; Name         Instructions Cycles
-   179                           ; simple_byte            7     4 (average)
-   180                           ;	Chosen strategy is simple_byte
-   181  007FE0  0A00               	xorlw	0	; case 0
-   182  007FE2  A4D8               	btfss	status,2,c
-   183  007FE4  0A01               	xorlw	1	; case 1
-   184  007FE6  0012               	return	
-   185  007FE8                     __end_of_lowBit:
-   186                           	opt stack 0
-   187  0000                     tblptru	equ	0xFF8
-   188                           status	equ	0xFD8
-   189                           tblptru	equ	0xFF8
-   190                           status	equ	0xFD8
-   191                           
-   192                           	psect	rparam
-   193  0000                     tblptru	equ	0xFF8
-   194                           status	equ	0xFD8
+   175                           ;main.c: 52: for (unsigned char index =0; index < 5 * 24; index++)
+   176  007F64  6E01               	movwf	??_send_board& (0+255),c
+   177  007F66  0E00               	movlw	0
+   178  007F68  6E04               	movwf	send_board@index,c
+   179  007F6A  5001               	movf	??_send_board& (0+255),w,c
+   180  007F6C  D038               	goto	L1
+   181  007F6E                     l22:
+   182                           
+   183                           ;main.c: 53: {
+   184                           ;main.c: 54: PORTB = 0xff;
+   185  007F6E  6881               	setf	3969,c	;volatile
+   186  007F70  F000               	nop		;# 
+   187  007F72  F000               	nop		;# 
+   188  007F74  F000               	nop		;# 
+   189  007F76  F000               	nop		;# 
+   190  007F78  F000               	nop		;# 
+   191  007F7A  F000               	nop		;# 
+   192  007F7C  F000               	nop		;# 
+   193  007F7E  F000               	nop		;# 
+   194                           
+   195                           ;main.c: 58: PORTB = block_coding[index];
+   196  007F80  5004               	movf	send_board@index,w,c
+   197  007F82  0D01               	mullw	1
+   198  007F84  0100               	movlb	0	; () banked
+   199  007F86  0E60               	movlw	low _block_coding
+   200  007F88  24F3               	addwf	prodl,w,c
+   201  007F8A  6ED9               	movwf	fsr2l,c
+   202  007F8C  0100               	movlb	0	; () banked
+   203  007F8E  0E00               	movlw	high _block_coding
+   204  007F90  20F4               	addwfc	prodh,w,c
+   205  007F92  6EDA               	movwf	fsr2h,c
+   206  007F94  50DF               	movf	indf2,w,c
+   207  007F96  6E81               	movwf	3969,c	;volatile
+   208  007F98  F000               	nop		;# 
+   209  007F9A  F000               	nop		;# 
+   210  007F9C  F000               	nop		;# 
+   211  007F9E  F000               	nop		;# 
+   212  007FA0  F000               	nop		;# 
+   213  007FA2  F000               	nop		;# 
+   214  007FA4  F000               	nop		;# 
+   215  007FA6  F000               	nop		;# 
+   216  007FA8  F000               	nop		;# 
+   217  007FAA  F000               	nop		;# 
+   218  007FAC  F000               	nop		;# 
+   219  007FAE  F000               	nop		;# 
+   220  007FB0  F000               	nop		;# 
+   221  007FB2  F000               	nop		;# 
+   222  007FB4  F000               	nop		;# 
+   223  007FB6  F000               	nop		;# 
+   224  007FB8  F000               	nop		;# 
+   225  007FBA  F000               	nop		;# 
+   226                           
+   227                           ;main.c: 62: PORTB = 0x00;
+   228  007FBC  0E00               	movlw	0
+   229  007FBE  6E81               	movwf	3969,c	;volatile
+   230  007FC0  F000               	nop		;# 
+   231  007FC2  F000               	nop		;# 
+   232  007FC4  F000               	nop		;# 
+   233  007FC6  F000               	nop		;# 
+   234  007FC8  F000               	nop		;# 
+   235  007FCA  F000               	nop		;# 
+   236  007FCC  F000               	nop		;# 
+   237  007FCE  F000               	nop		;# 
+   238  007FD0  F000               	nop		;# 
+   239  007FD2  F000               	nop		;# 
+   240  007FD4  F000               	nop		;# 
+   241  007FD6  F000               	nop		;# 
+   242  007FD8  F000               	nop		;# 
+   243  007FDA  F000               	nop		;# 
+   244  007FDC  2A04               	incf	send_board@index,f,c
+   245  007FDE                     L1:
+   246  007FDE  0E77               	movlw	119
+   247  007FE0  6404               	cpfsgt	send_board@index,c
+   248  007FE2  D7C5               	goto	l22
+   249                           
+   250                           ;main.c: 65: }
+   251                           ;main.c: 66: unsigned short int wait_time = 299;
+   252  007FE4  0E01               	movlw	1
+   253  007FE6  6E03               	movwf	send_board@wait_time+1,c
+   254  007FE8  0E2B               	movlw	43
+   255  007FEA  6E02               	movwf	send_board@wait_time,c
+   256                           
+   257                           ;main.c: 67: while (wait_time) wait_time--;
+   258  007FEC  D003               	goto	l650
+   259  007FEE                     l648:
+   260  007FEE  0602               	decf	send_board@wait_time,f,c
+   261  007FF0  A0D8               	btfss	status,0,c
+   262  007FF2  0603               	decf	send_board@wait_time+1,f,c
+   263  007FF4                     l650:
+   264  007FF4  5003               	movf	send_board@wait_time+1,w,c
+   265  007FF6  1002               	iorwf	send_board@wait_time,w,c
+   266  007FF8  A4D8               	btfss	status,2,c
+   267  007FFA  D7F9               	goto	l648
+   268  007FFC  F000               	nop		;# 
+   269  007FFE  0012               	return	
+   270  008000                     __end_of_send_board:
+   271                           	opt stack 0
+   272                           prodh	equ	0xFF4
+   273                           prodl	equ	0xFF3
+   274                           postinc0	equ	0xFEE
+   275                           wreg	equ	0xFE8
+   276                           indf2	equ	0xFDF
+   277                           fsr2h	equ	0xFDA
+   278                           fsr2l	equ	0xFD9
+   279                           status	equ	0xFD8
+   280                           
+   281 ;; *************** function _setup *****************
+   282 ;; Defined at:
+   283 ;;		line 18 in file "main.c"
+   284 ;; Parameters:    Size  Location     Type
+   285 ;;		None
+   286 ;; Auto vars:     Size  Location     Type
+   287 ;;  index           1    1[COMRAM] unsigned char 
+   288 ;; Return value:  Size  Location     Type
+   289 ;;		None               void
+   290 ;; Registers used:
+   291 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh
+   292 ;; Tracked objects:
+   293 ;;		On entry : 0/0
+   294 ;;		On exit  : 0/0
+   295 ;;		Unchanged: 0/0
+   296 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   297 ;;      Params:         0       0       0       0       0       0       0       0       0
+   298 ;;      Locals:         1       0       0       0       0       0       0       0       0
+   299 ;;      Temps:          1       0       0       0       0       0       0       0       0
+   300 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   301 ;;Total ram usage:        2 bytes
+   302 ;; Hardware stack levels used:    1
+   303 ;; This function calls:
+   304 ;;		Nothing
+   305 ;; This function is called by:
+   306 ;;		_main
+   307 ;; This function uses a non-reentrant model
+   308 ;;
+   309                           
+   310                           	psect	text2
+   311  007F34                     __ptext2:
+   312                           	opt stack 0
+   313  007F34                     _setup:
+   314                           	opt stack 30
+   315                           
+   316                           ;main.c: 20: for (unsigned char index = 0; index < 5 * 24; index++)
+   317                           
+   318                           ;incstack = 0
+   319                           ;incstack = 0
+   320  007F34  6E01               	movwf	??_setup& (0+255),c
+   321  007F36  0E00               	movlw	0
+   322  007F38  6E02               	movwf	setup@index,c
+   323  007F3A  5001               	movf	??_setup& (0+255),w,c
+   324  007F3C  D00D               	goto	L2
+   325  007F3E                     l626:
+   326                           
+   327                           ;main.c: 21: {
+   328                           ;main.c: 22: block_coding[index] = 0;
+   329  007F3E  5002               	movf	setup@index,w,c
+   330  007F40  0D01               	mullw	1
+   331  007F42  0100               	movlb	0	; () banked
+   332  007F44  0E60               	movlw	low _block_coding
+   333  007F46  24F3               	addwf	prodl,w,c
+   334  007F48  6ED9               	movwf	fsr2l,c
+   335  007F4A  0100               	movlb	0	; () banked
+   336  007F4C  0E00               	movlw	high _block_coding
+   337  007F4E  20F4               	addwfc	prodh,w,c
+   338  007F50  6EDA               	movwf	fsr2h,c
+   339  007F52  0E00               	movlw	0
+   340  007F54  6EDF               	movwf	indf2,c
+   341                           
+   342                           ; BSR set to: 0
+   343  007F56  2A02               	incf	setup@index,f,c
+   344  007F58                     L2:
+   345                           
+   346                           ; BSR set to: 0
+   347  007F58  0E77               	movlw	119
+   348  007F5A  6402               	cpfsgt	setup@index,c
+   349  007F5C  D7F0               	goto	l626
+   350                           
+   351                           ; BSR set to: 0
+   352  007F5E  0012               	return	
+   353  007F60                     __end_of_setup:
+   354                           	opt stack 0
+   355  0000                     prodh	equ	0xFF4
+   356                           prodl	equ	0xFF3
+   357                           postinc0	equ	0xFEE
+   358                           wreg	equ	0xFE8
+   359                           indf2	equ	0xFDF
+   360                           fsr2h	equ	0xFDA
+   361                           fsr2l	equ	0xFD9
+   362                           status	equ	0xFD8
+   363                           prodh	equ	0xFF4
+   364                           prodl	equ	0xFF3
+   365                           postinc0	equ	0xFEE
+   366                           wreg	equ	0xFE8
+   367                           indf2	equ	0xFDF
+   368                           fsr2h	equ	0xFDA
+   369                           fsr2l	equ	0xFD9
+   370                           status	equ	0xFD8
+   371                           
+   372                           	psect	rparam
+   373  0000                     prodh	equ	0xFF4
+   374                           prodl	equ	0xFF3
+   375                           postinc0	equ	0xFEE
+   376                           wreg	equ	0xFE8
+   377                           indf2	equ	0xFDF
+   378                           fsr2h	equ	0xFDA
+   379                           fsr2l	equ	0xFD9
+   380                           status	equ	0xFD8
 
 
 Data Sizes:
     Strings     0
     Constant    0
     Data        0
-    BSS         0
+    BSS         120
     Persistent  0
     Stack       0
 
 Auto Spaces:
     Space          Size  Autos    Used
     COMRAM           95      4       4
-    BANK0           160      0       0
+    BANK0           160      0     120
     BANK1           256      0       0
     BANK2           256      0       0
     BANK3           256      0       0
@@ -226,7 +412,7 @@ Pointer List with Targets:
 
 Critical Paths under _main in COMRAM
 
-    _main->_lowBit
+    _main->_send_board
 
 Critical Paths under _main in BANK0
 
@@ -265,12 +451,15 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
  ---------------------------------------------------------------------------------
- (0) _main                                                 2     2      0      30
-                                              2 COMRAM     2     2      0
-                             _lowBit
+ (0) _main                                                 0     0      0     105
+                              _setup
+                         _send_board
  ---------------------------------------------------------------------------------
- (1) _lowBit                                               2     0      2      30
-                                              0 COMRAM     2     0      2
+ (1) _send_board                                           4     4      0      60
+                                              0 COMRAM     4     4      0
+ ---------------------------------------------------------------------------------
+ (1) _setup                                                2     2      0      45
+                                              0 COMRAM     2     2      0
  ---------------------------------------------------------------------------------
  Estimated maximum stack depth 1
  ---------------------------------------------------------------------------------
@@ -278,55 +467,63 @@ Call Graph Tables:
  Call Graph Graphs:
 
  _main (ROOT)
-   _lowBit
+   _setup
+   _send_board
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
-BITCOMRAM           5F      0       0       0        0.0%
+BIGRAM             7FF      0       0      21        0.0%
 EEDATA             100      0       0       0        0.0%
-NULL                 0      0       0       0        0.0%
-CODE                 0      0       0       0        0.0%
-COMRAM              5F      4       4       1        4.2%
-STACK                0      0       1       2        0.0%
-DATA                 0      0       0       3        0.0%
-BITBANK0            A0      0       0       4        0.0%
-BANK0               A0      0       0       5        0.0%
-BITBANK1           100      0       0       6        0.0%
-BANK1              100      0       0       7        0.0%
-BITBANK2           100      0       0       8        0.0%
-BANK2              100      0       0       9        0.0%
-BITBANK3           100      0       0      10        0.0%
-BANK3              100      0       0      11        0.0%
-BITBANK4           100      0       0      12        0.0%
-BANK4              100      0       0      13        0.0%
-BITBANK5           100      0       0      14        0.0%
-BANK5              100      0       0      15        0.0%
-BITBANK6           100      0       0      16        0.0%
-BANK6              100      0       0      17        0.0%
 BITBANK7           100      0       0      18        0.0%
 BANK7              100      0       0      19        0.0%
-ABS                  0      0       0      20        0.0%
-BIGRAM             7FF      0       0      21        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0      78       5       75.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F      4       4       1        4.2%
 BITSFR               0      0       0      40        0.0%
 SFR                  0      0       0      40        0.0%
+STACK                0      0       1       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0      7C      20        0.0%
+DATA                 0      0      7D       3        0.0%
+CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.21 build 54009 
-Symbol Table                                                                                   Wed May 28 11:12:52 2014
+Symbol Table                                                                                   Fri Jun 27 19:59:47 2014
 
-           __CFG_BOR$OFF 000000             __CFG_IESO$ON 000000             __CFG_LVP$OFF 000000  
-           __CFG_WDT$OFF 000000             __CFG_PWRT$ON 000000            __CFG_FCMEN$ON 000000  
-                   _main 7FE8                     start 0000            __CFG_MCLRE$ON 000000  
-                  ?_main 0001                    _PORTB 000F81            __CFG_USBDIV$2 000000  
-                  _TRISB 000F93                    status 000FD8          __initialization 7FCC  
-           __end_of_main 8000                   ??_main 0003            __activetblptr 000002  
-         __CFG_PLLDIV$12 000000                   _OSCCON 000FD3           __CFG_STVREN$ON 000000  
-                 _lowBit 7FD6                   tblptru 000FF8               __accesstop 0060  
-__end_of__initialization 7FCC          __CFG_PBADEN$OFF 000000           __pcstackCOMRAM 0001  
-      lowBit@bitPolarity 0002                  ?_lowBit 0001                  _OSCTUNE 000F9B  
-    lowBit@whichPortBBit 0001                  __Hparam 0000                  __Lparam 0000  
-                __pcinit 7FCC          __size_of_lowBit 0012                  __ramtop 0800  
-                __ptext0 7FE8                  __ptext1 7FD6     end_of_initialization 7FCC  
-          __Lmediumconst 0000           __end_of_lowBit 7FE8      start_initialization 7FCC  
-               ??_lowBit 0003                 __Hrparam 0000                 __Lrparam 0000  
-   __CFG_FOSC$ECPLLIO_EC 000000            __size_of_main 0018    __CFG_CPUDIV$OSC1_PLL2 000000  
+                     l22 7F6E                       l16 7F1C                      l626 7F3E  
+                    l650 7FF4                      l648 7FEE             __CFG_BOR$OFF 000000  
+                    prod 000FF3                      wreg 000FE8             __CFG_IESO$ON 000000  
+           __CFG_LVP$OFF 000000             __CFG_WDT$OFF 000000             __CFG_PWRT$ON 000000  
+          __CFG_FCMEN$ON 000000                     _main 7F18                     indf2 000FDF  
+                   fsr2l 000FD9                     prodl 000FF3                     start 0000  
+          __CFG_MCLRE$ON 000000                    ?_main 0001                    _T1CON 000FCD  
+                  _PORTB 000F81            __CFG_USBDIV$2 000000                    _TRISB 000F93  
+                  _TRISD 000F95                    _setup 7F34                    status 000FD8  
+        __initialization 7F22             __end_of_main 7F22                   ??_main 0005  
+          __activetblptr 000000           __CFG_PLLDIV$12 000000                   ?_setup 0001  
+                 _OSCCON 000FD3           __CFG_STVREN$ON 000000                   clear_0 7F28  
+             __accesstop 0060  __end_of__initialization 7F2E          __CFG_PBADEN$OFF 000000  
+         __pcstackCOMRAM 0001            __end_of_setup 7F60                  ??_setup 0001  
+             __pbssBANK0 0060                  _OSCTUNE 000F9B             _block_coding 0060  
+                __Hparam 0000                  __Lparam 0000                  __pcinit 7F22  
+                __ramtop 0800                  __ptext0 7F18                  __ptext1 7F60  
+                __ptext2 7F34     end_of_initialization 7F2E               _send_board 7F60  
+                postinc0 000FEE      start_initialization 7F22              ?_send_board 0001  
+    send_board@wait_time 0002      __size_of_send_board 00A0           __size_of_setup 002C  
+             setup@index 0002                 __Hrparam 0000                 __Lrparam 0000  
+   __CFG_FOSC$ECPLLIO_EC 000000             ??_send_board 0001            __size_of_main 000A  
+  __CFG_CPUDIV$OSC1_PLL2 000000       __end_of_send_board 8000          send_board@index 0004  

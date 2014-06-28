@@ -1,15 +1,19 @@
 __S0 30000E 0 ABS 0
-__S1 5 0 ABS 0
+__S1 D8 0 ABS 0
 __Hintentry 0 0 ABS 0
 __Lintentry 0 0 ABS 0
-_main 7FE8 0 CODE 0
+_block_coding 60 0 BANK0 1
+_main 7F1A 0 CODE 0
 start 0 0 CODE 0
+send_board@index 4 0 COMRAM 1
 _TRISB F93 0 ABS 0
+_TRISD F95 0 ABS 0
 _PORTB F81 0 ABS 0
 __Hirdata 0 0 CODE 0
 __Lirdata 0 0 CODE 0
 __HRAM 0 0 ABS 0
 __LRAM 1 0 ABS 0
+_T1CON FCD 0 ABS 0
 __Hconfig 30000E 0 CONFIG 0
 __Lconfig 300000 0 CONFIG 0
 __Hbigram 0 0 ABS 0
@@ -27,6 +31,7 @@ __CFG_STVREN$ON 0 0 ABS 0
 __Lbss 0 0 RAM 1
 __Hnvrram 0 0 COMRAM 1
 __Lnvrram 0 0 COMRAM 1
+_setup 7F36 0 CODE 0
 __Heeprom_data 0 0 EEDATA 0
 __Leeprom_data 0 0 EEDATA 0
 __Hintsave_regs 0 0 BIGRAM 1
@@ -54,11 +59,10 @@ __Habs1 0 0 ABS 0
 __Labs1 0 0 ABS 0
 __HnvFARRAM 0 0 FARRAM 0
 __LnvFARRAM 0 0 FARRAM 0
-lowBit@bitPolarity 2 0 COMRAM 1
+__end_of_send_board 8000 0 CODE 0
 __CFG_PBADEN$OFF 0 0 ABS 0
 __Hdata 0 0 ABS 0
 __Ldata 0 0 ABS 0
-_lowBit 7FD6 0 CODE 0
 __CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0
 __Htemp 0 0 COMRAM 1
 __Ltemp 0 0 COMRAM 1
@@ -69,13 +73,12 @@ __Linit 0 0 CODE 0
 __Hintcodelo 0 0 CODE 0
 __Lintcodelo 0 0 CODE 0
 __Hrbss 0 0 COMRAM 1
-__end_of_main 8000 0 CODE 0
+__end_of_main 7F24 0 CODE 0
 __Lrbss 0 0 COMRAM 1
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
-end_of_initialization 7FCC 0 CODE 0
+end_of_initialization 7F30 0 CODE 0
 __CFG_FOSC$ECPLLIO_EC 0 0 ABS 0
-__end_of_lowBit 7FE8 0 CODE 0
 __Hibigdata 0 0 CODE 0
 __Libigdata 0 0 CODE 0
 _OSCTUNE F9B 0 ABS 0
@@ -89,6 +92,7 @@ __Hbank2 0 0 ABS 0
 __Lbank2 0 0 ABS 0
 __Hbank3 0 0 ABS 0
 __Lbank3 0 0 ABS 0
+send_board@wait_time 2 0 COMRAM 1
 __Hbank4 0 0 ABS 0
 __Lbank4 0 0 ABS 0
 __Hbank5 0 0 ABS 0
@@ -103,11 +107,15 @@ __Htext0 0 0 ABS 0
 __Ltext0 0 0 ABS 0
 __Htext1 0 0 ABS 0
 __Ltext1 0 0 ABS 0
-__ptext0 7FE8 0 CODE 0
-__ptext1 7FD6 0 CODE 0
+__ptext0 7F1A 0 CODE 0
+__Htext2 0 0 ABS 0
+__Ltext2 0 0 ABS 0
+__ptext1 7F62 0 CODE 0
+__ptext2 7F36 0 CODE 0
+_send_board 7F62 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
-__end_of__initialization 7FCC 0 CODE 0
+__end_of__initialization 7F30 0 CODE 0
 __CFG_USBDIV$2 0 0 ABS 0
 __Hidata 0 0 CODE 0
 __Lidata 0 0 CODE 0
@@ -122,23 +130,28 @@ __HcstackCOMRAM 0 0 ABS 0
 __LcstackCOMRAM 0 0 ABS 0
 __CFG_IESO$ON 0 0 ABS 0
 __pcstackCOMRAM 1 0 COMRAM 1
-?_lowBit 1 0 COMRAM 1
+__size_of_setup 0 0 ABS 0
 __Hsmallconst 0 0 SMALLCONST 0
 __Lsmallconst 0 0 SMALLCONST 0
 __Hnvbit 0 0 COMRAM 1
 __Lnvbit 0 0 COMRAM 1
 __Hcinit 0 0 ABS 0
 __Lcinit 0 0 ABS 0
-__pcinit 7FCC 0 CODE 0
+__pcinit 7F24 0 CODE 0
 __ramtop 800 0 RAM 0
 __mediumconst 0 0 MEDIUMCONST 0
 __size_of_main 0 0 ABS 0
 __Hconst 0 0 CODE 0
 __Lconst 0 0 CODE 0
+__HbssBANK0 0 0 ABS 0
+__LbssBANK0 0 0 ABS 0
+__pbssBANK0 60 0 BANK0 1
 __CFG_PWRT$ON 0 0 ABS 0
-__size_of_lowBit 0 0 ABS 0
+__size_of_send_board 0 0 ABS 0
+setup@index 2 0 COMRAM 1
 __Hend_init 4 0 CODE 0
 __Lend_init 0 0 CODE 0
+__end_of_setup 7F62 0 CODE 0
 __smallconst 0 0 SMALLCONST 0
 __Hreset_vec 0 0 CODE 0
 __Lreset_vec 0 0 CODE 0
@@ -149,12 +162,11 @@ intlevel0 0 0 CODE 0
 intlevel1 0 0 CODE 0
 intlevel2 0 0 CODE 0
 intlevel3 0 0 CODE 0
-lowBit@whichPortBBit 1 0 COMRAM 1
-start_initialization 7FCC 0 CODE 0
+start_initialization 7F24 0 CODE 0
 __CFG_MCLRE$ON 0 0 ABS 0
-__initialization 7FCC 0 CODE 0
+__initialization 7F24 0 CODE 0
 __CFG_BOR$OFF 0 0 ABS 0
-__activetblptr 2 0 ABS 0
+__activetblptr 0 0 ABS 0
 __CFG_FCMEN$ON 0 0 ABS 0
 __CFG_WDT$OFF 0 0 ABS 0
 __CFG_LVP$OFF 0 0 ABS 0
@@ -163,23 +175,45 @@ reset_vec 0 3 CODE 0 0
 config 300000 30000D CONFIG 300000 0
 idloc 200000 200007 IDLOC 200000 0
 cstackCOMRAM 1 4 COMRAM 1 1
-text0 7FE8 7FFF CODE 7FE8 0
-text1 7FD6 7FE7 CODE 7FD6 0
-cinit 7FCC 7FD5 CODE 7FCC 0
+bssBANK0 60 D7 BANK0 60 1
+text1 7F62 7FFF CODE 7F62 0
+text2 7F36 7F61 CODE 7F36 0
+cinit 7F24 7F35 CODE 7F24 0
+text0 7F1A 7F23 CODE 7F1A 0
 %locals
 dist/default/production\Tetris.X.production.obj
 E:\Microchip\xc8\v1.21\include\pic18f4550.h
 E:\Microchip\xc8\v1.21\include\pic18f4550.h
 main.c
-26 7FE8 0 CODE 0
-27 7FFC 0 CODE 0
-C:\Users\rolfes\AppData\Local\Temp\s2h0.
-863 7FCC 0 CODE 0
-864 7FCE 0 CODE 0
-865 7FD0 0 CODE 0
-866 7FD2 0 CODE 0
+34 7F1A 0 CODE 0
+37 7F1E 0 CODE 0
+C:\Users\rolfes\AppData\Local\Temp\s3gs.
+872 7F24 0 CODE 0
+873 7F28 0 CODE 0
+875 7F2A 0 CODE 0
+876 7F2C 0 CODE 0
+877 7F2E 0 CODE 0
+884 7F30 0 CODE 0
+885 7F32 0 CODE 0
 main.c
-34 7FD6 0 CODE 0
-35 7FDA 0 CODE 0
-36 7FDE 0 CODE 0
-45 7FE6 0 CODE 0
+51 7F62 0 CODE 0
+52 7F66 0 CODE 0
+54 7F70 0 CODE 0
+55 7F72 0 CODE 0
+56 7F74 0 CODE 0
+58 7F82 0 CODE 0
+59 7F9A 0 CODE 0
+60 7F9C 0 CODE 0
+62 7FBE 0 CODE 0
+63 7FC2 0 CODE 0
+64 7FC4 0 CODE 0
+52 7FDE 0 CODE 0
+66 7FE6 0 CODE 0
+67 7FEE 0 CODE 0
+68 7FFC 0 CODE 0
+67 7FFE 0 CODE 0
+main.c
+20 7F36 0 CODE 0
+22 7F40 0 CODE 0
+20 7F58 0 CODE 0
+26 7F60 0 CODE 0

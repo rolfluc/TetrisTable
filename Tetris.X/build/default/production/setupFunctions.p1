@@ -5,6 +5,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
 "4168
 [v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"8018
+[v _T1CON `Vuc ~T0 @X0 0 e@4045 ]
 [; ;pic18f4550.h: 44: extern volatile unsigned char SPPDATA @ 0xF62;
 "46 E:\Microchip\xc8\v1.21\include\pic18f4550.h
 [; ;pic18f4550.h: 46: asm("SPPDATA equ 0F62h");
@@ -4838,4 +4840,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;setupFunctions.c: 12: }
 "12
 [e :UE 594 ]
+}
+"15
+[v _tmr1Setup `(v ~T0 @X0 1 ef ]
+{
+[; ;setupFunctions.c: 14: void tmr1Setup(void)
+[; ;setupFunctions.c: 15: {
+[e :U _tmr1Setup ]
+[f ]
+[; ;setupFunctions.c: 16: T1CON = 0b11111000;
+"16
+[e = _T1CON -> -> 248 `i `uc ]
+[; ;setupFunctions.c: 17: }
+"17
+[e :UE 595 ]
 }

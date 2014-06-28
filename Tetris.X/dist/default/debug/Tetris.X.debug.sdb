@@ -124,35 +124,50 @@
 [v ___asftsub __asftsub `(f  1 e 3 0 ]
 "5 E:\Microchip\xc8\v1.21\sources\pic18\aslmul.c
 [v ___aslmul __aslmul `(ul  1 e 4 0 ]
-"14 C:\Users\rolfes\MPLABXProjects\Tetris.X\main.c
+"18 C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c
 [v _setup setup `(v  1 e 0 0 ]
-"24
-[v _main main `(v  1 e 0 0 ]
 "33
-[v _lowBit lowBit `(v  1 e 0 0 ]
-"47
-[v _highBit highBit `(v  1 e 0 0 ]
-"4 C:\Users\rolfes\MPLABXProjects\Tetris.X\setupFunctions.c
+[v _main main `(v  1 e 0 0 ]
+"50
+[v _send_board send_board `(v  1 e 0 0 ]
+"4 C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c
 [v _clockSetup clockSetup `(v  1 e 0 0 ]
 "10
 [v _pinSetup pinSetup `(v  1 e 0 0 ]
+"15
+[v _tmr1Setup tmr1Setup `(v  1 e 0 0 ]
 "2722 E:\Microchip\xc8\v1.21\include\pic18f4550.h
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
 "4168
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"4560
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "4882
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3995 ]
+"8018
+[v _T1CON T1CON `VEuc  1 e 1 @4045 ]
 "8584
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-"24 C:\Users\rolfes\MPLABXProjects\Tetris.X\main.c
+"14 C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c
+[v _block_coding block_coding `[120]uc  1 e 120 0 ]
+"33
 [v _main main `(v  1 e 0 0 ]
 {
-"27
+"39
 } 0
-"33
-[v _lowBit lowBit `(v  1 e 0 0 ]
+"50
+[v _send_board send_board `(v  1 e 0 0 ]
 {
-[v lowBit@whichPortBBit whichPortBBit `uc  1 p 1 0 ]
-[v lowBit@bitPolarity bitPolarity `uc  1 p 1 1 ]
-"45
+"52
+[v send_board@index index `uc  1 a 1 3 ]
+"66
+[v send_board@wait_time wait_time `us  1 a 2 1 ]
+"69
+} 0
+"18
+[v _setup setup `(v  1 e 0 0 ]
+{
+"20
+[v setup@index index `uc  1 a 1 1 ]
+"26
 } 0

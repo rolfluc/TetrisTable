@@ -42,24 +42,28 @@ void main(void)
     //1 bit: 0.80us HI, 0.40us LO,
     //each timing is +/- 0.10us
     //res:  50us
-
+    //1 cycle = 20.83333 ns
+    //20 cycles is closest
+//
+//Send board sends the pre-made LED matrix array from PORTD
+//
 void send_board(void)
 {
     TRISD = 0x00;
-    for (uint8_t index =0; index < TOTAL_BYTE_LENGTH; index++)
+    for (uint8_t index =0; index < TOTAL_BYTE_LENGTH; index++) // 5 cycles (first is 10)
     {
-        PORTB = 0xff;
-        //wait 400ns
-        PORTB = block_coding[index];
-        //wait 400ns
-        PORTB = 0x00;
-        //wait 400ns, start again
+        PORTB = 0xff; 
+        asm("nop");
+        asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
+        
+        PORTB = block_coding[index]; 
+        asm("nop");
+        asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
+        
+        PORTB = 0x00; 
+        asm("nop");
+        asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
     }
-    //wait 50us
-}
-// measured in
-void wait(uint16_t wait_time)
-{
-    T1CONbits.TMR1ON = 1;
-    //use a timer interrupt for more accurate timing
+    uint16_t wait_time = 299;
+    while (wait_time) wait_time--;
 }
