@@ -15,7 +15,7 @@ extern "C" {
     #define int32_t int
     #define int64_t long int
 
-    #define clockSpeed 48000000
+    #define CLOCKSPEED 48000000
 
     #define LED_LENGTH 5
     #define LED_COLOR_LENGTH 24

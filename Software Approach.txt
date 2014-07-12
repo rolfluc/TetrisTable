@@ -1,3 +1,20 @@
+//********************************************
+//************Project Build*******************
+//********************************************
+
+
+In order to build this project, I used a set of tools to do so.
+
+1.)MPLAB X 	v1.32
+2.)XC8 		v1.32
+3.)Pic Kit 3
+
+
+//********************************************
+//***************Overview ********************
+//********************************************
+
+
 This project will contain at minimum 800 LED's. These LED's consist of WS2812's since they are individually addressable, and can be put in a string. For this, there will be 8 strings of 100 LED's. For this reason one port of a PIC18F4550 will be used.
 
 The port that will be used is PORTD. PORTD is used since PORTB is used for button interrupts, needed for the external switches.
@@ -40,3 +57,4 @@ Each string of 100 will take:		2.93ms (with the 50us reset time)
 //********************************************
 //*************Tetris Play********************
 //********************************************
+

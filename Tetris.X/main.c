@@ -21,13 +21,14 @@ void setup(void)
     {
         block_coding[index] = 0;
     }
+    //interr
     //clockSetup();
     //pinSetup();
 }
 
 
 /*
- * 
+ *
  */
 void main(void)
 {
@@ -35,6 +36,7 @@ void main(void)
     while(1)
     {
         send_board();
+
     }
 }
 
@@ -47,23 +49,26 @@ void main(void)
 //
 //Send board sends the pre-made LED matrix array from PORTD
 //
-void send_board(void)
+void send_board()
 {
+    INTCONbits.GIE = 0;
     TRISD = 0x00;
     for (uint8_t index =0; index < TOTAL_BYTE_LENGTH; index++) // 5 cycles (first is 10)
     {
-        PORTB = 0xff; 
+        PORTD = 0xff;
+//#if CLOCKSPEED > 10
         asm("nop");
         asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
-        
-        PORTB = block_coding[index]; 
+
+        PORTD = block_coding[index];
         asm("nop");
         asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
-        
-        PORTB = 0x00; 
+
+        PORTD = 0x00;
         asm("nop");
         asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
     }
-    uint16_t wait_time = 299;
+    uint16_t wait_time = 266;
     while (wait_time) wait_time--;
+    INTCONbits.GIE = 1;
 }
