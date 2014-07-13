@@ -1,12 +1,168 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"4885 C:\Program Files (x86)\Microchip\xc8\v1.32\include\pic18f4550.h
+"9163 C:\Program Files (x86)\Microchip\xc8\v1.32\include\pic18f4550.h
+[s S548 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S548 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"9173
+[s S549 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S549 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE GIE ]
+"9183
+[s S550 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S550 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE GIEL GIEH ]
+"9193
+[s S551 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S551 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"9203
+[s S552 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S552 . . GIEL GIEH ]
+"9162
+[u S547 `S548 1 `S549 1 `S550 1 `S551 1 `S552 1 ]
+[n S547 . . . . . . ]
+"9209
+[v _INTCONbits `VS547 ~T0 @X0 0 e@4082 ]
+"8149
+[s S507 :1 `uc 1 ]
+[n S507 . NOT_BOR ]
+"8152
+[s S508 :1 `uc 1 :1 `uc 1 ]
+[n S508 . . NOT_POR ]
+"8156
+[s S509 :2 `uc 1 :1 `uc 1 ]
+[n S509 . . NOT_PD ]
+"8160
+[s S510 :3 `uc 1 :1 `uc 1 ]
+[n S510 . . NOT_TO ]
+"8164
+[s S511 :4 `uc 1 :1 `uc 1 ]
+[n S511 . . NOT_RI ]
+"8168
+[s S512 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S512 . nBOR nPOR nPD nTO nRI . SBOREN IPEN ]
+"8178
+[s S513 :7 `uc 1 :1 `uc 1 ]
+[n S513 . . NOT_IPEN ]
+"8182
+[s S514 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S514 . BOR POR PD TO RI . nIPEN ]
+"8148
+[u S506 `S507 1 `S508 1 `S509 1 `S510 1 `S511 1 `S512 1 `S513 1 `S514 1 ]
+[n S506 . . . . . . . . . ]
+"8192
+[v _RCONbits `VS506 ~T0 @X0 0 e@4048 ]
+"5125
+[s S337 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S337 . TMR1IP TMR2IP CCP1IP SSPIP TXIP RCIP ADIP SPPIP ]
+"5135
+[s S338 :7 `uc 1 :1 `uc 1 ]
+[n S338 . . PSPIP ]
+"5139
+[s S339 :5 `uc 1 :1 `uc 1 ]
+[n S339 . . RC1IP ]
+"5143
+[s S340 :4 `uc 1 :1 `uc 1 ]
+[n S340 . . TX1IP ]
+"5124
+[u S336 `S337 1 `S338 1 `S339 1 `S340 1 ]
+[n S336 . . . . . ]
+"5148
+[v _IPR1bits `VS336 ~T0 @X0 0 e@3999 ]
+"9087
+[s S544 :7 `uc 1 :1 `uc 1 ]
+[n S544 . . NOT_RBPU ]
+"9091
+[s S545 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S545 . RBIP . TMR0IP . INTEDG2 INTEDG1 INTEDG0 nRBPU ]
+"9101
+[s S546 :2 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
+[n S546 . . T0IP . RBPU ]
+"9086
+[u S543 `S544 1 `S545 1 `S546 1 ]
+[n S543 . . . . ]
+"9108
+[v _INTCON2bits `VS543 ~T0 @X0 0 e@4081 ]
+"4885
 [v _OSCTUNE `Vuc ~T0 @X0 0 e@3995 ]
 "8587
 [v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
 "4171
 [v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"8137
+[v _TMR1H `Vuc ~T0 @X0 0 e@4047 ]
+"8131
+[v _TMR1L `Vuc ~T0 @X0 0 e@4046 ]
 "8021
 [v _T1CON `Vuc ~T0 @X0 0 e@4045 ]
+"5037
+[s S332 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S332 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF SPPIF ]
+"5047
+[s S333 :7 `uc 1 :1 `uc 1 ]
+[n S333 . . PSPIF ]
+"5051
+[s S334 :5 `uc 1 :1 `uc 1 ]
+[n S334 . . RC1IF ]
+"5055
+[s S335 :4 `uc 1 :1 `uc 1 ]
+[n S335 . . TX1IF ]
+"5036
+[u S331 `S332 1 `S333 1 `S334 1 `S335 1 ]
+[n S331 . . . . . ]
+"5060
+[v _PIR1bits `VS331 ~T0 @X0 0 e@3998 ]
+"4949
+[s S327 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S327 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE SPPIE ]
+"4959
+[s S328 :7 `uc 1 :1 `uc 1 ]
+[n S328 . . PSPIE ]
+"4963
+[s S329 :5 `uc 1 :1 `uc 1 ]
+[n S329 . . RC1IE ]
+"4967
+[s S330 :4 `uc 1 :1 `uc 1 ]
+[n S330 . . TX1IE ]
+"4948
+[u S326 `S327 1 `S328 1 `S329 1 `S330 1 ]
+[n S326 . . . . . ]
+"4972
+[v _PIE1bits `VS326 ~T0 @X0 0 e@3997 ]
+"8027
+[s S501 :2 `uc 1 :1 `uc 1 ]
+[n S501 . . NOT_T1SYNC ]
+"8031
+[s S502 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S502 . TMR1ON TMR1CS nT1SYNC T1OSCEN T1CKPS T1RUN RD16 ]
+"8040
+[s S503 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S503 . . T1SYNC . T1CKPS0 T1CKPS1 ]
+"8047
+[s S504 :3 `uc 1 :1 `uc 1 ]
+[n S504 . . SOSCEN ]
+"8051
+[s S505 :7 `uc 1 :1 `uc 1 ]
+[n S505 . . T1RD16 ]
+"8026
+[u S500 `S501 1 `S502 1 `S503 1 `S504 1 `S505 1 ]
+[n S500 . . . . . . ]
+"8056
+[v _T1CONbits `VS500 ~T0 @X0 0 e@4045 ]
+"8015
+[v _TMR2 `Vuc ~T0 @X0 0 e@4044 ]
+"7809
+[v _T2CON `Vuc ~T0 @X0 0 e@4042 ]
+"7815
+[s S485 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S485 . T2CKPS TMR2ON TOUTPS ]
+"7820
+[s S486 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S486 . T2CKPS0 T2CKPS1 . T2OUTPS0 T2OUTPS1 T2OUTPS2 T2OUTPS3 ]
+"7829
+[s S487 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S487 . . TOUTPS0 TOUTPS1 TOUTPS2 TOUTPS3 ]
+"7814
+[u S484 `S485 1 `S486 1 `S487 1 ]
+[n S484 . . . . ]
+"7837
+[v _T2CONbits `VS484 ~T0 @X0 0 e@4042 ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic18f4550.h: 47: extern volatile unsigned char SPPDATA @ 0xF62;
@@ -4814,50 +4970,305 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 149: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 151: extern __nonreentrant void _delay3(unsigned char);
 "3 setupFunctions.c
-[v _clockSetup `(v ~T0 @X0 1 ef ]
+[v _enableInterrupts `(v ~T0 @X0 1 ef ]
 "4
 {
-[; ;setupFunctions.c: 3: void clockSetup(void)
+[; ;setupFunctions.c: 3: void enableInterrupts(void)
 [; ;setupFunctions.c: 4: {
-[e :U _clockSetup ]
+[e :U _enableInterrupts ]
 [f ]
-[; ;setupFunctions.c: 5: OSCTUNE = 0x8f;
+[; ;setupFunctions.c: 5: INTCONbits.GIE =1;
 "5
-[e = _OSCTUNE -> -> 143 `i `uc ]
-[; ;setupFunctions.c: 6: OSCCON = 0xf1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;setupFunctions.c: 6: INTCONbits.PEIE = 1;
 "6
-[e = _OSCCON -> -> 241 `i `uc ]
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
 [; ;setupFunctions.c: 7: }
 "7
 [e :UE 593 ]
 }
+"8
+[v _disableInterrupts `(v ~T0 @X0 1 ef ]
 "9
-[v _pinSetup `(v ~T0 @X0 1 ef ]
-"10
 {
-[; ;setupFunctions.c: 9: void pinSetup(void)
-[; ;setupFunctions.c: 10: {
-[e :U _pinSetup ]
+[; ;setupFunctions.c: 8: void disableInterrupts(void)
+[; ;setupFunctions.c: 9: {
+[e :U _disableInterrupts ]
 [f ]
-[; ;setupFunctions.c: 11: TRISB = 0x00;
+[; ;setupFunctions.c: 10: INTCONbits.GIE = 0;
+"10
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 11: INTCONbits.PEIE = 0;
 "11
-[e = _TRISB -> -> 0 `i `uc ]
+[e = . . _INTCONbits 1 6 -> -> 0 `i `uc ]
 [; ;setupFunctions.c: 12: }
 "12
 [e :UE 594 ]
 }
 "14
-[v _tmr1Setup `(v ~T0 @X0 1 ef ]
+[v _setInterruptPriority `(v ~T0 @X0 1 ef ]
 "15
 {
-[; ;setupFunctions.c: 14: void tmr1Setup(void)
+[; ;setupFunctions.c: 14: void setInterruptPriority(void)
 [; ;setupFunctions.c: 15: {
+[e :U _setInterruptPriority ]
+[f ]
+[; ;setupFunctions.c: 16: RCONbits.IPEN = 1;
+"16
+[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
+[; ;setupFunctions.c: 17: IPR1bits.TMR1IP = 0;
+"17
+[e = . . _IPR1bits 0 0 -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 18: IPR1bits.TMR2IP = 0;
+"18
+[e = . . _IPR1bits 0 1 -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 19: INTCON2bits.RBIP = 0;
+"19
+[e = . . _INTCON2bits 1 0 -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 20: }
+"20
+[e :UE 595 ]
+}
+"22
+[v _clockSetup `(v ~T0 @X0 1 ef ]
+"23
+{
+[; ;setupFunctions.c: 22: void clockSetup(void)
+[; ;setupFunctions.c: 23: {
+[e :U _clockSetup ]
+[f ]
+[; ;setupFunctions.c: 24: OSCTUNE = 0x8f;
+"24
+[e = _OSCTUNE -> -> 143 `i `uc ]
+[; ;setupFunctions.c: 25: OSCCON = 0xf1;
+"25
+[e = _OSCCON -> -> 241 `i `uc ]
+[; ;setupFunctions.c: 26: }
+"26
+[e :UE 596 ]
+}
+"28
+[v _pinSetup `(v ~T0 @X0 1 ef ]
+"29
+{
+[; ;setupFunctions.c: 28: void pinSetup(void)
+[; ;setupFunctions.c: 29: {
+[e :U _pinSetup ]
+[f ]
+[; ;setupFunctions.c: 30: TRISB = 0x00;
+"30
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 31: }
+"31
+[e :UE 597 ]
+}
+"33
+[v _tmr1Setup `(v ~T0 @X0 1 ef ]
+"34
+{
+[; ;setupFunctions.c: 33: void tmr1Setup(void)
+[; ;setupFunctions.c: 34: {
 [e :U _tmr1Setup ]
 [f ]
-[; ;setupFunctions.c: 16: T1CON = 0b11111000;
-"16
-[e = _T1CON -> -> 248 `i `uc ]
-[; ;setupFunctions.c: 17: }
-"17
-[e :UE 595 ]
+"35
+[v _t1con `uc ~T0 @X0 1 a ]
+[; ;setupFunctions.c: 35: char t1con = 0x00;
+[e = _t1con -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 36: t1con = t1con | 0xC0;
+"36
+[e = _t1con -> | -> _t1con `i -> 192 `i `uc ]
+[; ;setupFunctions.c: 37: t1con = t1con | 0x08;
+"37
+[e = _t1con -> | -> _t1con `i -> 8 `i `uc ]
+[; ;setupFunctions.c: 38: TMR1H = 0;
+"38
+[e = _TMR1H -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 39: TMR1L = 0;
+"39
+[e = _TMR1L -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 40: T1CON = t1con;
+"40
+[e = _T1CON _t1con ]
+[; ;setupFunctions.c: 41: PIR1bits.TMR1IF = 0;
+"41
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 42: PIE1bits.TMR1IE = 1;
+"42
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+[; ;setupFunctions.c: 43: }
+"43
+[e :UE 598 ]
+}
+[v F5271 `(v ~T0 @X0 1 tf ]
+"44
+[v _tmr1On `TF5271 ~T0 @X0 1 e ]
+"45
+{
+[; ;setupFunctions.c: 44: inline void tmr1On(void)
+[; ;setupFunctions.c: 45: {
+[e :U _tmr1On ]
+[f ]
+[; ;setupFunctions.c: 46: T1CONbits.TMR1ON = 1;
+"46
+[e = . . _T1CONbits 1 0 -> -> 1 `i `uc ]
+[; ;setupFunctions.c: 47: }
+"47
+[e :UE 599 ]
+}
+[v F5274 `(v ~T0 @X0 1 tf ]
+"48
+[v _tmr1Off `TF5274 ~T0 @X0 1 e ]
+"49
+{
+[; ;setupFunctions.c: 48: inline void tmr1Off(void)
+[; ;setupFunctions.c: 49: {
+[e :U _tmr1Off ]
+[f ]
+[; ;setupFunctions.c: 50: T1CONbits.TMR1ON = 0;
+"50
+[e = . . _T1CONbits 1 0 -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 51: }
+"51
+[e :UE 600 ]
+}
+"52
+[v _tmr2Setup `(v ~T0 @X0 1 ef ]
+"53
+{
+[; ;setupFunctions.c: 52: void tmr2Setup(void)
+[; ;setupFunctions.c: 53: {
+[e :U _tmr2Setup ]
+[f ]
+"54
+[v _t2con `uc ~T0 @X0 1 a ]
+[; ;setupFunctions.c: 54: char t2con = 0x00;
+[e = _t2con -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 55: t2con = t2con | 0x00;
+"55
+[e = _t2con -> | -> _t2con `i -> 0 `i `uc ]
+[; ;setupFunctions.c: 56: t2con = t2con | 0x00;
+"56
+[e = _t2con -> | -> _t2con `i -> 0 `i `uc ]
+[; ;setupFunctions.c: 57: TMR2 = 0;
+"57
+[e = _TMR2 -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 58: T2CON = t2con;
+"58
+[e = _T2CON _t2con ]
+[; ;setupFunctions.c: 59: PIR1bits.TMR2IF = 0;
+"59
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 60: PIE1bits.TMR2IE = 1;
+"60
+[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
+[; ;setupFunctions.c: 61: }
+"61
+[e :UE 601 ]
+}
+[v F5280 `(v ~T0 @X0 1 tf ]
+"62
+[v _tmr2On `TF5280 ~T0 @X0 1 e ]
+"63
+{
+[; ;setupFunctions.c: 62: inline void tmr2On(void)
+[; ;setupFunctions.c: 63: {
+[e :U _tmr2On ]
+[f ]
+[; ;setupFunctions.c: 64: T2CONbits.TMR2ON = 1;
+"64
+[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+[; ;setupFunctions.c: 65: }
+"65
+[e :UE 602 ]
+}
+[v F5283 `(v ~T0 @X0 1 tf ]
+"66
+[v _tmr2Off `TF5283 ~T0 @X0 1 e ]
+"67
+{
+[; ;setupFunctions.c: 66: inline void tmr2Off(void)
+[; ;setupFunctions.c: 67: {
+[e :U _tmr2Off ]
+[f ]
+[; ;setupFunctions.c: 68: T2CONbits.TMR2ON = 0;
+"68
+[e = . . _T2CONbits 0 1 -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 69: }
+"69
+[e :UE 603 ]
+}
+"75
+[v _portBIntSetup `(v ~T0 @X0 1 ef ]
+"76
+{
+[; ;setupFunctions.c: 75: void portBIntSetup(void)
+[; ;setupFunctions.c: 76: {
+[e :U _portBIntSetup ]
+[f ]
+[; ;setupFunctions.c: 78: TRISB = 0xff;
+"78
+[e = _TRISB -> -> 255 `i `uc ]
+[; ;setupFunctions.c: 79: INTCON2bits.RBPU = 0;
+"79
+[e = . . _INTCON2bits 2 3 -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 80: INTCONbits.RBIF = 0;
+"80
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 81: INTCONbits.RBIE = 1;
+"81
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+[; ;setupFunctions.c: 82: }
+"82
+[e :UE 604 ]
+}
+"84
+[v _INT0IntSetup `(v ~T0 @X0 1 ef ]
+"85
+{
+[; ;setupFunctions.c: 84: void INT0IntSetup(void)
+[; ;setupFunctions.c: 85: {
+[e :U _INT0IntSetup ]
+[f ]
+[; ;setupFunctions.c: 86: INTCON2bits.INTEDG0 = 0;
+"86
+[e = . . _INTCON2bits 1 6 -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 87: INTCONbits.INT0IF = 0;
+"87
+[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
+[; ;setupFunctions.c: 88: INTCONbits.INT0IE = 1;
+"88
+[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
+[; ;setupFunctions.c: 89: }
+"89
+[e :UE 605 ]
+}
+"91
+[v _interrupt_setup `(v ~T0 @X0 1 ef ]
+"92
+{
+[; ;setupFunctions.c: 91: void interrupt_setup(void)
+[; ;setupFunctions.c: 92: {
+[e :U _interrupt_setup ]
+[f ]
+[; ;setupFunctions.c: 93: disableInterrupts();
+"93
+[e ( _disableInterrupts ..  ]
+[; ;setupFunctions.c: 94: setInterruptPriority();
+"94
+[e ( _setInterruptPriority ..  ]
+[; ;setupFunctions.c: 95: tmr1Setup();
+"95
+[e ( _tmr1Setup ..  ]
+[; ;setupFunctions.c: 96: tmr2Setup();
+"96
+[e ( _tmr2Setup ..  ]
+[; ;setupFunctions.c: 97: portBIntSetup();
+"97
+[e ( _portBIntSetup ..  ]
+[; ;setupFunctions.c: 98: INT0IntSetup();
+"98
+[e ( _INT0IntSetup ..  ]
+[; ;setupFunctions.c: 99: }
+"99
+[e :UE 606 ]
 }

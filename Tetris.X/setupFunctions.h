@@ -14,6 +14,17 @@ extern "C" {
 
     void clockSetup(void);
     void pinSetup(void);
+    void INT0IntSetup(void);
+    void interrupt_setup(void);
+    inline void tmr2Off(void);
+    inline void tmr2On(void);
+    void tmr2Setup(void);
+    inline void tmr1Off(void);
+    inline void tmr1On(void);
+    void tmr1Setup(void);
+    void enableInterrupts(void);
+    void disableInterrupts(void);
+    void setInterruptPriority(void);
 
 
 #ifdef	__cplusplus

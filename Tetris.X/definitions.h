@@ -20,6 +20,7 @@ extern "C" {
     #define LED_LENGTH 5
     #define LED_COLOR_LENGTH 24
     #define TOTAL_BYTE_LENGTH LED_LENGTH * LED_COLOR_LENGTH
+    #define HEIGHT_OF_BOARD 10
 
 
 

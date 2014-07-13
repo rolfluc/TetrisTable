@@ -6436,6 +6436,17 @@ extern char * ftoa(float f, int * status);
 # 15 "setupFunctions.h"
 void clockSetup(void);
 void pinSetup(void);
+void INT0IntSetup(void);
+void interrupt_setup(void);
+inline void tmr2Off(void);
+inline void tmr2On(void);
+void tmr2Setup(void);
+inline void tmr1Off(void);
+inline void tmr1On(void);
+void tmr1Setup(void);
+void enableInterrupts(void);
+void disableInterrupts(void);
+void setInterruptPriority(void);
 
 # 17 "mainFunctions.h"
 void send_board(void);
@@ -6450,6 +6461,27 @@ void wait(unsigned short int wait_time);
 
 
 unsigned char block_coding[5 * 24];
+unsigned char current_height[10];
+
+void interrupt high_interrupt(void)
+{
+
+}
+
+
+void interrupt low_priority low_interrupt(void)
+{
+
+if (PIR1bits.TMR1IF == 1)
+{
+
+}
+if (PIR1bits.TMR2IF == 1)
+{
+
+}
+}
+
 
 
 void setup(void)
@@ -6459,30 +6491,32 @@ for (unsigned char index = 0; index < 5 * 24; index++)
 {
 block_coding[index] = 0;
 }
+for (unsigned char index = 0; index < 5 * 24; index++)
+{
+current_height[index] = 0;
+}
 
 
 }
 
-# 32
+# 57
 void main(void)
 {
 setup();
 while(1)
 {
 send_board();
-
 }
 }
 
-# 51
+# 75
 void send_board()
 {
-INTCONbits.GIE = 0;
+disableInterrupts();
 TRISD = 0x00;
 for (unsigned char index =0; index < 5 * 24; index++)
 {
 PORTD = 0xff;
-
 asm("nop");
 asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
 
@@ -6496,5 +6530,5 @@ asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm
 }
 unsigned short int wait_time = 266;
 while (wait_time) wait_time--;
-INTCONbits.GIE = 1;
+enableInterrupts();
 }
