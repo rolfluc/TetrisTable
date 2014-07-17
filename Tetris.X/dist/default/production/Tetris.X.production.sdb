@@ -2,174 +2,175 @@
 [d version 1.1 ]
 [d edition pro ]
 [d chip 18F4550 ]
-[d frameptr 4065 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\abdiv.c
+"5 E:\Microchip\xc8\v1.21\sources\common\abdiv.c
 [v ___abdiv __abdiv `(c  1 e 1 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\abmod.c
+"5 E:\Microchip\xc8\v1.21\sources\common\abmod.c
 [v ___abmod __abmod `(c  1 e 1 0 ]
-"31 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\abtofl.c
+"32 E:\Microchip\xc8\v1.21\sources\common\abtofl.c
 [v ___abtofl __abtofl `(d  1 e 3 0 ]
-"33 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\abtoft.c
+"34 E:\Microchip\xc8\v1.21\sources\common\abtoft.c
 [v ___abtoft __abtoft `(f  1 e 3 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\aldiv.c
+"10 E:\Microchip\xc8\v1.21\sources\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\almod.c
+"10 E:\Microchip\xc8\v1.21\sources\common\almod.c
 [v ___almod __almod `(l  1 e 4 0 ]
-"36 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\altofl.c
+"37 E:\Microchip\xc8\v1.21\sources\common\altofl.c
 [v ___altofl __altofl `(d  1 e 3 0 ]
-"42 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\altoft.c
+"43 E:\Microchip\xc8\v1.21\sources\common\altoft.c
 [v ___altoft __altoft `(f  1 e 3 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\atdiv.c
+"10 E:\Microchip\xc8\v1.21\sources\common\atdiv.c
 [v ___atdiv __atdiv `(m  1 e 3 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\atmod.c
+"10 E:\Microchip\xc8\v1.21\sources\common\atmod.c
 [v ___atmod __atmod `(m  1 e 3 0 ]
-"37 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\attofl.c
+"38 E:\Microchip\xc8\v1.21\sources\common\attofl.c
 [v ___attofl __attofl `(d  1 e 3 0 ]
-"37 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\attoft.c
+"38 E:\Microchip\xc8\v1.21\sources\common\attoft.c
 [v ___attoft __attoft `(f  1 e 3 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awdiv.c
+"10 E:\Microchip\xc8\v1.21\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c
+"10 E:\Microchip\xc8\v1.21\sources\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
-"31 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awtofl.c
+"32 E:\Microchip\xc8\v1.21\sources\common\awtofl.c
 [v ___awtofl __awtofl `(d  1 e 3 0 ]
-"32 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awtoft.c
+"33 E:\Microchip\xc8\v1.21\sources\common\awtoft.c
 [v ___awtoft __awtoft `(f  1 e 3 0 ]
-"63 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\double.c
-[v ___flpack __flpack `(d  1 e 3 0 ]
-"88 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\fladd.c
-[v ___fladd __fladd `(d  1 e 3 0 ]
-"49 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\fldiv.c
-[v ___fldiv __fldiv `(d  1 e 3 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\flge.c
-[v ___flge __flge `(b  1 e 0 0 ]
-"62 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\flmul.c
-[v ___flmul __flmul `(d  1 e 3 0 ]
-"15 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\flneg.c
-[v ___flneg __flneg `(d  1 e 3 0 ]
-"62 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\float.c
-[v ___ftpack __ftpack `(f  1 e 3 0 ]
-"20 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\flsub.c
-[v ___flsub __flsub `(d  1 e 3 0 ]
-"43 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\fltol.c
-[v ___fltol __fltol `(l  1 e 4 0 ]
-"86 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftadd.c
-[v ___ftadd __ftadd `(f  1 e 3 0 ]
-"49 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftdiv.c
-[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftge.c
-[v ___ftge __ftge `(b  1 e 0 0 ]
-"62 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftmul.c
-[v ___ftmul __ftmul `(f  1 e 3 0 ]
-"15 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftneg.c
-[v ___ftneg __ftneg `(f  1 e 3 0 ]
-"20 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ftsub.c
-[v ___ftsub __ftsub `(f  1 e 3 0 ]
-"44 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\fttol.c
-[v ___fttol __fttol `(l  1 e 4 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lbdiv.c
-[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lbmod.c
-[v ___lbmod __lbmod `(uc  1 e 1 0 ]
-"27 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lbtofl.c
-[v ___lbtofl __lbtofl `(d  1 e 3 0 ]
-"27 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lbtoft.c
-[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lldiv.c
-[v ___lldiv __lldiv `(ul  1 e 4 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\llmod.c
-[v ___llmod __llmod `(ul  1 e 4 0 ]
-"30 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lltofl.c
-[v ___lltofl __lltofl `(d  1 e 3 0 ]
-"35 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lltoft.c
-[v ___lltoft __lltoft `(f  1 e 3 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ltdiv.c
-[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\ltmod.c
-[v ___ltmod __ltmod `(um  1 e 3 0 ]
-"30 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lttofl.c
-[v ___lttofl __lttofl `(d  1 e 3 0 ]
-"30 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lttoft.c
-[v ___lttoft __lttoft `(f  1 e 3 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwmod.c
-[v ___lwmod __lwmod `(ui  1 e 2 0 ]
-"28 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwtofl.c
-[v ___lwtofl __lwtofl `(d  1 e 3 0 ]
-"28 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\lwtoft.c
-[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
-"15 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-"15 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul24.c
-[v ___tmul __tmul `(um  1 e 3 0 ]
-"15 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul32.c
-[v ___lmul __lmul `(ul  1 e 4 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\Umul8.c
+"3 E:\Microchip\xc8\v1.21\sources\common\bmul.c
 [v ___bmul __bmul `(uc  1 e 1 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic18\asfladd.c
+"64 E:\Microchip\xc8\v1.21\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"89 E:\Microchip\xc8\v1.21\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"50 E:\Microchip\xc8\v1.21\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"5 E:\Microchip\xc8\v1.21\sources\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"51 E:\Microchip\xc8\v1.21\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"16 E:\Microchip\xc8\v1.21\sources\common\flneg.c
+[v ___flneg __flneg `(d  1 e 3 0 ]
+"63 E:\Microchip\xc8\v1.21\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"22 E:\Microchip\xc8\v1.21\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"44 E:\Microchip\xc8\v1.21\sources\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"87 E:\Microchip\xc8\v1.21\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"50 E:\Microchip\xc8\v1.21\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"5 E:\Microchip\xc8\v1.21\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"52 E:\Microchip\xc8\v1.21\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"16 E:\Microchip\xc8\v1.21\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"22 E:\Microchip\xc8\v1.21\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"45 E:\Microchip\xc8\v1.21\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"5 E:\Microchip\xc8\v1.21\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"5 E:\Microchip\xc8\v1.21\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"28 E:\Microchip\xc8\v1.21\sources\common\lbtofl.c
+[v ___lbtofl __lbtofl `(d  1 e 3 0 ]
+"28 E:\Microchip\xc8\v1.21\sources\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"10 E:\Microchip\xc8\v1.21\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"10 E:\Microchip\xc8\v1.21\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"31 E:\Microchip\xc8\v1.21\sources\common\lltofl.c
+[v ___lltofl __lltofl `(d  1 e 3 0 ]
+"36 E:\Microchip\xc8\v1.21\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"3 E:\Microchip\xc8\v1.21\sources\common\lmul.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"10 E:\Microchip\xc8\v1.21\sources\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"10 E:\Microchip\xc8\v1.21\sources\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"31 E:\Microchip\xc8\v1.21\sources\common\lttofl.c
+[v ___lttofl __lttofl `(d  1 e 3 0 ]
+"31 E:\Microchip\xc8\v1.21\sources\common\lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"10 E:\Microchip\xc8\v1.21\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"10 E:\Microchip\xc8\v1.21\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"29 E:\Microchip\xc8\v1.21\sources\common\lwtofl.c
+[v ___lwtofl __lwtofl `(d  1 e 3 0 ]
+"29 E:\Microchip\xc8\v1.21\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"3 E:\Microchip\xc8\v1.21\sources\common\tmul.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"5 E:\Microchip\xc8\v1.21\sources\common\wmul.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"5 E:\Microchip\xc8\v1.21\sources\pic18\asfladd.c
 [v ___asfladd __asfladd `(d  1 e 3 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic18\asfldiv.c
+"5 E:\Microchip\xc8\v1.21\sources\pic18\asfldiv.c
 [v ___asfldiv __asfldiv `(d  1 e 3 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic18\asflmul.c
+"5 E:\Microchip\xc8\v1.21\sources\pic18\asflmul.c
 [v ___asflmul __asflmul `(d  1 e 3 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic18\asflsub.c
+"5 E:\Microchip\xc8\v1.21\sources\pic18\asflsub.c
 [v ___asflsub __asflsub `(d  1 e 3 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic18\asftadd.c
+"5 E:\Microchip\xc8\v1.21\sources\pic18\asftadd.c
 [v ___asftadd __asftadd `(f  1 e 3 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic18\asftdiv.c
+"5 E:\Microchip\xc8\v1.21\sources\pic18\asftdiv.c
 [v ___asftdiv __asftdiv `(f  1 e 3 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic18\asftmul.c
+"5 E:\Microchip\xc8\v1.21\sources\pic18\asftmul.c
 [v ___asftmul __asftmul `(f  1 e 3 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic18\asftsub.c
+"5 E:\Microchip\xc8\v1.21\sources\pic18\asftsub.c
 [v ___asftsub __asftsub `(f  1 e 3 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v1.32\sources\pic18\aslmul.c
+"5 E:\Microchip\xc8\v1.21\sources\pic18\aslmul.c
 [v ___aslmul __aslmul `(ul  1 e 4 0 ]
-"17 C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c
+"20 C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c
 [v _high_interrupt high_interrupt `II(v  1 e 0 0 ]
-"23
-[v _low_interrupt low_interrupt `IIL(v  1 e 0 0 ]
-"38
-[v _setup setup `(v  1 e 0 0 ]
-"57
-[v _main main `(v  1 e 0 0 ]
-"75
-[v _send_board send_board `(v  1 e 0 0 ]
-"3 C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c
-[v _enableInterrupts enableInterrupts `(v  1 e 0 0 ]
-"8
-[v _disableInterrupts disableInterrupts `(v  1 e 0 0 ]
-"14
-[v _setInterruptPriority setInterruptPriority `(v  1 e 0 0 ]
-"22
-[v _clockSetup clockSetup `(v  1 e 0 0 ]
-"28
-[v _pinSetup pinSetup `(v  1 e 0 0 ]
 "33
+[v _low_interrupt low_interrupt `IIL(v  1 e 0 0 ]
+"49
+[v _setup setup `(v  1 e 0 0 ]
+"72
+[v _main main `(v  1 e 0 0 ]
+"90
+[v _send_board send_board `(v  1 e 0 0 ]
+"4 C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c
+[v _enableInterrupts enableInterrupts `(v  1 e 0 0 ]
+"9
+[v _disableInterrupts disableInterrupts `(v  1 e 0 0 ]
+"15
+[v _setInterruptPriority setInterruptPriority `(v  1 e 0 0 ]
+"23
+[v _clockSetup clockSetup `(v  1 e 0 0 ]
+"29
+[v _pinSetup pinSetup `(v  1 e 0 0 ]
+"34
 [v _tmr1Setup tmr1Setup `(v  1 e 0 0 ]
-"44
+"45
 [v _tmr1On tmr1On `T(v  1 e 0 0 ]
-"48
+"49
 [v _tmr1Off tmr1Off `T(v  1 e 0 0 ]
-"52
+"53
 [v _tmr2Setup tmr2Setup `(v  1 e 0 0 ]
-"62
+"63
 [v _tmr2On tmr2On `T(v  1 e 0 0 ]
-"66
+"67
 [v _tmr2Off tmr2Off `T(v  1 e 0 0 ]
-"75
+"76
 [v _portBIntSetup portBIntSetup `(v  1 e 0 0 ]
-"84
+"85
 [v _INT0IntSetup INT0IntSetup `(v  1 e 0 0 ]
-"91
+"92
 [v _interrupt_setup interrupt_setup `(v  1 e 0 0 ]
-"2987 C:\Program Files (x86)\Microchip\xc8\v1.32\include\pic18f4550.h
+"2722 E:\Microchip\xc8\v1.21\include\pic18f4550.h
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+"2984
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
-"4171
+"4168
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-"4563
+"4560
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-"4885
+"4882
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3995 ]
 [s S21 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
@@ -180,7 +181,7 @@
 `uc 1 ADIF 1 0 :1:6 
 `uc 1 SPPIF 1 0 :1:7 
 ]
-"4972
+"4969
 [s S30 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 PSPIF 1 0 :1:7 
 ]
@@ -192,18 +193,18 @@
 ]
 [u S39 . 1 `S21 1 . 1 0 `S30 1 . 1 0 `S33 1 . 1 0 `S36 1 . 1 0 ]
 [v _PIE1bits PIE1bits `VES39  1 e 1 @3997 ]
-"5060
+"5057
 [v _PIR1bits PIR1bits `VES39  1 e 1 @3998 ]
-"5148
+"5145
 [v _IPR1bits IPR1bits `VES39  1 e 1 @3999 ]
-"7809
+"7806
 [v _T2CON T2CON `VEuc  1 e 1 @4042 ]
-[s S472 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S532 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 TOUTPS 1 0 :4:3 
 ]
-"7837
-[s S476 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+"7834
+[s S536 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -211,23 +212,23 @@
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
-[s S484 . 1 `uc 1 . 1 0 :3:0 
+[s S544 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 TOUTPS0 1 0 :1:3 
 `uc 1 TOUTPS1 1 0 :1:4 
 `uc 1 TOUTPS2 1 0 :1:5 
 `uc 1 TOUTPS3 1 0 :1:6 
 ]
-[u S490 . 1 `S472 1 . 1 0 `S476 1 . 1 0 `S484 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES490  1 e 1 @4042 ]
-"8015
+[u S550 . 1 `S532 1 . 1 0 `S536 1 . 1 0 `S544 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES550  1 e 1 @4042 ]
+"8012
 [v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
-"8021
+"8018
 [v _T1CON T1CON `VEuc  1 e 1 @4045 ]
-[s S417 . 1 `uc 1 . 1 0 :2:0 
+[s S477 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T1SYNC 1 0 :1:2 
 ]
-"8056
-[s S420 . 1 `uc 1 TMR1ON 1 0 :1:0 
+"8053
+[s S480 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 TMR1CS 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 T1OSCEN 1 0 :1:3 
@@ -235,40 +236,40 @@
 `uc 1 T1RUN 1 0 :1:6 
 `uc 1 RD16 1 0 :1:7 
 ]
-[s S428 . 1 `uc 1 . 1 0 :2:0 
+[s S488 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 ]
-[s S434 . 1 `uc 1 . 1 0 :3:0 
+[s S494 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 SOSCEN 1 0 :1:3 
 ]
-[s S437 . 1 `uc 1 . 1 0 :7:0 
+[s S497 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 T1RD16 1 0 :1:7 
 ]
-[u S440 . 1 `S417 1 . 1 0 `S420 1 . 1 0 `S428 1 . 1 0 `S434 1 . 1 0 `S437 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES440  1 e 1 @4045 ]
-"8131
+[u S500 . 1 `S477 1 . 1 0 `S480 1 . 1 0 `S488 1 . 1 0 `S494 1 . 1 0 `S497 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES500  1 e 1 @4045 ]
+"8128
 [v _TMR1L TMR1L `VEuc  1 e 1 @4046 ]
-"8137
+"8134
 [v _TMR1H TMR1H `VEuc  1 e 1 @4047 ]
-[s S186 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+[s S246 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
-"8192
-[s S188 . 1 `uc 1 . 1 0 :1:0 
+"8189
+[s S248 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
-[s S191 . 1 `uc 1 . 1 0 :2:0 
+[s S251 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_PD 1 0 :1:2 
 ]
-[s S194 . 1 `uc 1 . 1 0 :3:0 
+[s S254 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_TO 1 0 :1:3 
 ]
-[s S197 . 1 `uc 1 . 1 0 :4:0 
+[s S257 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RI 1 0 :1:4 
 ]
-[s S200 . 1 `uc 1 nBOR 1 0 :1:0 
+[s S260 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nPD 1 0 :1:2 
 `uc 1 nTO 1 0 :1:3 
@@ -277,10 +278,10 @@
 `uc 1 SBOREN 1 0 :1:6 
 `uc 1 IPEN 1 0 :1:7 
 ]
-[s S209 . 1 `uc 1 . 1 0 :7:0 
+[s S269 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_IPEN 1 0 :1:7 
 ]
-[s S212 . 1 `uc 1 BOR 1 0 :1:0 
+[s S272 . 1 `uc 1 BOR 1 0 :1:0 
 `uc 1 POR 1 0 :1:1 
 `uc 1 PD 1 0 :1:2 
 `uc 1 TO 1 0 :1:3 
@@ -288,15 +289,15 @@
 `uc 1 . 1 0 :2:5 
 `uc 1 nIPEN 1 0 :1:7 
 ]
-[u S220 . 1 `S186 1 . 1 0 `S188 1 . 1 0 `S191 1 . 1 0 `S194 1 . 1 0 `S197 1 . 1 0 `S200 1 . 1 0 `S209 1 . 1 0 `S212 1 . 1 0 ]
-[v _RCONbits RCONbits `VES220  1 e 1 @4048 ]
-"8587
+[u S280 . 1 `S246 1 . 1 0 `S248 1 . 1 0 `S251 1 . 1 0 `S254 1 . 1 0 `S257 1 . 1 0 `S260 1 . 1 0 `S269 1 . 1 0 `S272 1 . 1 0 ]
+[v _RCONbits RCONbits `VES280  1 e 1 @4048 ]
+"8584
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S306 . 1 `uc 1 . 1 0 :7:0 
+[s S366 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
-"9108
-[s S309 . 1 `uc 1 RBIP 1 0 :1:0 
+"9105
+[s S369 . 1 `uc 1 RBIP 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 TMR0IP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -305,14 +306,14 @@
 `uc 1 INTEDG0 1 0 :1:6 
 `uc 1 nRBPU 1 0 :1:7 
 ]
-[s S318 . 1 `uc 1 . 1 0 :2:0 
+[s S378 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IP 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 RBPU 1 0 :1:7 
 ]
-[u S323 . 1 `S306 1 . 1 0 `S309 1 . 1 0 `S318 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES323  1 e 1 @4081 ]
-[s S99 . 1 `uc 1 RBIF 1 0 :1:0 
+[u S383 . 1 `S366 1 . 1 0 `S369 1 . 1 0 `S378 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES383  1 e 1 @4081 ]
+[s S63 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -321,8 +322,8 @@
 `uc 1 PEIE_GIEL 1 0 :1:6 
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
-"9209
-[s S108 . 1 `uc 1 RBIF 1 0 :1:0 
+"9206
+[s S72 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -331,7 +332,7 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S117 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S81 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -340,7 +341,7 @@
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[s S126 . 1 `uc 1 . 1 0 :1:0 
+[s S90 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -349,56 +350,77 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S135 . 1 `uc 1 . 1 0 :6:0 
+[s S99 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S139 . 1 `S99 1 . 1 0 `S108 1 . 1 0 `S117 1 . 1 0 `S126 1 . 1 0 `S135 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES139  1 e 1 @4082 ]
+[u S103 . 1 `S63 1 . 1 0 `S72 1 . 1 0 `S81 1 . 1 0 `S90 1 . 1 0 `S99 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES103  1 e 1 @4082 ]
 "14 C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c
 [v _block_coding block_coding `[120]uc  1 e 120 0 ]
 "15
-[v _current_height current_height `[10]uc  1 e 10 0 ]
-"57
+[v _current_height current_height `[20]ui  1 e 40 0 ]
+"16
+[v _b_value b_value `[10]uc  1 e 10 0 ]
+"17
+[v _b_buf_ptr b_buf_ptr `uc  1 e 1 0 ]
+"72
 [v _main main `(v  1 e 0 0 ]
 {
-"64
+"78
 } 0
-"38
-[v _setup setup `(v  1 e 0 0 ]
-{
-"45
-[v setup@index_93 index `uc  1 a 1 32 ]
-"41
-[v setup@index index `uc  1 a 1 31 ]
-"51
-} 0
-"75
+"90
 [v _send_board send_board `(v  1 e 0 0 ]
 {
-"79
-[v send_board@index index `uc  1 a 1 33 ]
-"93
-[v send_board@wait_time wait_time `us  1 a 2 31 ]
-"96
+"95
+[v send_board@index index `uc  1 a 1 43 ]
+"111
+[v send_board@wait_time wait_time `us  1 a 2 41 ]
+"92
+[v send_board@y y `uc  1 a 1 40 ]
+"91
+[v send_board@x x `uc  1 a 1 39 ]
+"114
 } 0
-"3 C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c
+"4 C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c
 [v _enableInterrupts enableInterrupts `(v  1 e 0 0 ]
 {
 "7
 } 0
-"8
+"9
 [v _disableInterrupts disableInterrupts `(v  1 e 0 0 ]
 {
 "12
 } 0
-"23 C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c
+"49 C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c
+[v _setup setup `(v  1 e 0 0 ]
+{
+"59
+[v setup@index_192 index `uc  1 a 1 41 ]
+"55
+[v setup@index_191 index `uc  1 a 1 40 ]
+"51
+[v setup@index index `uc  1 a 1 39 ]
+"65
+} 0
+"33
 [v _low_interrupt low_interrupt `IIL(v  1 e 0 0 ]
 {
-"34
+"44
 } 0
-"17
+"10 E:\Microchip\xc8\v1.21\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"10
+[v ___awmod@dividend dividend `i  1 p 2 0 ]
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
+"35
+} 0
+"20 C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c
 [v _high_interrupt high_interrupt `II(v  1 e 0 0 ]
 {
-"20
+"29
 } 0

@@ -12,7 +12,9 @@
 
 
 uint8_t block_coding[TOTAL_BYTE_LENGTH];
-uint8_t current_height[HEIGHT_OF_BOARD];
+uint32_t current_height[HEIGHT_OF_BOARD];
+uint8_t b_value[PORTB_BUFFER_LENGTH];
+uint8_t b_buf_ptr = 0;
 
 void interrupt high_interrupt(void)
 {
@@ -32,11 +34,14 @@ void interrupt low_priority low_interrupt(void)
     if (INTCONbits.RBIF == 1)
     {
         INTCONbits.RBIF = 0;
-        uint8_t b_value = PORTB;
+        b_value[b_buf_ptr] = PORTB;
+        b_buf_ptr = ++b_buf_ptr % 10;
     }
     if (INTCONbits.INT0IF == 1)
     {
         INTCONbits.INT0IF = 0;
+        b_value[b_buf_ptr] = PORTB;
+        b_buf_ptr = ++b_buf_ptr % 10;
     }
 }
 
@@ -49,9 +54,13 @@ void setup(void)
     {
         block_coding[index] = 0;
     }
-    for (uint8_t index = 0; index < TOTAL_BYTE_LENGTH; index++)
+    for (uint8_t index = 0; index < LENGTH_OF_BOARD; index++)
     {
         current_height[index] = 0;
+    }
+    for (uint8_t index = 0; index < PORTB_BUFFER_LENGTH; index++)
+    {
+        b_value[index] = 0;
     }
     //clockSetup();
     //pinSetup();
@@ -81,6 +90,8 @@ void main(void)
 //
 void send_board()
 {
+    uint8_t x = 0;
+    uint8_t y = 0;
     disableInterrupts();
     TRISD = 0x00;
     for (uint8_t index =0; index < TOTAL_BYTE_LENGTH; index++) // 5 cycles (first is 10)
@@ -90,12 +101,14 @@ void send_board()
         asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
 
         PORTD = block_coding[index];
-        asm("nop");
-        asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
+        //asm("nop");
+        //asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
+        //18 cycles
 
         PORTD = 0x00;
-        asm("nop");
-        asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
+        //asm("nop");
+        //asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");asm("nop");
+        //14 cycles
     }
     uint16_t wait_time = 266;
     while (wait_time) wait_time--;

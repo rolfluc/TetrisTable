@@ -1,9 +1,10 @@
-_send_board: CODE, 170 0 162
-_high_interrupt: CODE, 8 0 428
-_main: CODE, 540 0 10
-__initialization: CODE, 510 0 24
-_disableInterrupts: CODE, 556 0 6
-_low_interrupt: CODE, 24 0 142
-_setup: CODE, 436 0 74
-_enableInterrupts: CODE, 550 0 6
-Total: 852
+_send_board: CODE, 656 0 118
+_high_interrupt: CODE, 8 0 400
+___awmod: CODE, 532 0 124
+_main: CODE, 804 0 10
+__initialization: CODE, 774 0 24
+_disableInterrupts: CODE, 820 0 6
+_low_interrupt: CODE, 24 0 250
+_setup: CODE, 408 0 124
+_enableInterrupts: CODE, 814 0 6
+Total: 1062
