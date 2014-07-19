@@ -54,7 +54,7 @@ void tmr2Setup(void)
     char t2con = 0x00;
     t2con = t2con | 0x00; // Postscale is:
     t2con = t2con | 0x00; //Timer2 off, Prescaler:
-    TMR2 = 0;
+    TMR2 = 255;
     T2CON = t2con;
     PIR1bits.TMR2IF = 0;
     PIE1bits.TMR2IE = 1;

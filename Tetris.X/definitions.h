@@ -17,7 +17,7 @@ extern "C" {
 
     #define CLOCKSPEED 48000000
 
-    #define LED_LENGTH 300
+    #define LED_LENGTH 200
     #define LED_COLOR_LENGTH 24
     #define TOTAL_BYTE_LENGTH LED_LENGTH * LED_COLOR_LENGTH
     #define HEIGHT_OF_BOARD 20

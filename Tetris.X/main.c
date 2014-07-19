@@ -73,9 +73,10 @@ void setup(void)
 void main(void)
 {
     setup();
+    tmr2On();
     while(1)
     {
-        send_board();
+        //send_board();
     }
 }
 
