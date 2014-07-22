@@ -11,23 +11,32 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
-end_init CODE 0 106 106 4 1
+$C:\Users\rolfes\AppData\Local\Temp\s4ek.obj
+end_init CODE 0 112 112 4 1
 reset_vec CODE 0 0 0 4 1
 idloc IDLOC 0 200000 200000 8 1
 config CONFIG 0 300000 300000 E 1
 $dist/default/production\Tetris.X.production.obj
-intcodelo CODE 0 18 18 EE 1
-intcode CODE 0 8 8 10 1
-intcode_body CODE 0 20A 20A 70 1
-text4 CODE 0 10A 10A 90 1
-text2 CODE 0 19A 19A 70 1
-text1 CODE 0 2A2 2A2 4 1
-cstackCOMRAM COMRAM 1 34 34 28 1
+intcodelo CODE 0 18 18 FA 1
+intcode CODE 0 8 8 C 1
+intcode_body CODE 0 19A 19A 82 1
+text13 CODE 0 21C 21C 7C 1
+text11 CODE 0 31E 31E 6 1
+text10 CODE 0 306 306 A 1
+text9 CODE 0 2FC 2FC A 1
+text8 CODE 0 2D0 2D0 14 1
+text7 CODE 0 2F2 2F2 A 1
+text6 CODE 0 310 310 8 1
+text5 CODE 0 2B6 2B6 1A 1
+text4 CODE 0 318 318 6 1
+text3 CODE 0 116 116 84 1
+text2 CODE 0 328 328 4 1
+text1 CODE 0 324 324 4 1
+cstackCOMRAM COMRAM 1 34 34 2C 1
 bssBANK1 BANK1 1 100 100 C8 1
 bssCOMRAM COMRAM 1 1 1 33 1
-cinit CODE 0 27A 27A 1E 1
-text0 CODE 0 298 298 A 1
+cinit CODE 0 298 298 1E 1
+text0 CODE 0 2E4 2E4 E 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -42,20 +51,20 @@ BANK4 000400-0004FF 1
 BANK5 000500-0005FF 1
 BANK6 000600-0006FF 1
 BANK7 000700-0007FF 1
-BIGRAM 00005C-0000FF 1
+BIGRAM 000060-0000FF 1
 BIGRAM 0001C8-0007FF 1
 CODE 000004-000007 1
-CODE 0002A6-007FFF 1
-COMRAM 00005C-00005F 1
+CODE 000014-000017 1
+CODE 00032C-007FFF 1
 CONST 000004-000007 1
-CONST 0002A6-007FFF 1
+CONST 000014-000017 1
+CONST 00032C-007FFF 1
 EEDATA F00000-F000FF 1
 MEDIUMCONST 000800-007FFF 1
 RAM 000060-0000FF 1
 RAM 0001C8-0007FF 1
 SFR 000F60-000FFF 1
 SMALLCONST 000800-007FFF 1
-STACK 0001C8-0007FF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -70,83 +79,110 @@ STACK 0001C8-0007FF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Tetris.X.production.obj
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":35 8 intcode CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":19 8 intcode CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":32 18 intcodelo CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":67 18 intcodelo CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":34 5C intcodelo CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":36 60 intcodelo CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":37 62 intcodelo CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":38 76 intcodelo CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":40 8E intcodelo CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":42 92 intcodelo CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":43 94 intcodelo CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":44 A8 intcodelo CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":46 C0 intcodelo CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":8 10A text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":13 10A text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":14 10E text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":15 122 text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":16 12A text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":18 12E text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":19 142 text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":20 14A text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":21 152 text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":22 156 text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":23 158 text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":24 15E text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":22 160 text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":27 164 text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":28 170 text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":29 178 text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":30 17E text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":32 182 text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":33 188 text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":34 190 text4 CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\sources\common\awmod.c":35 198 text4 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":50 19A text2 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":53 19A text2 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":55 1A0 text2 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":53 1B8 text2 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":57 1C0 text2 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":59 1C6 text2 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":57 1DE text2 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":61 1E6 text2 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":63 1EC text2 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":61 200 text2 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":67 208 text2 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":19 20A intcode_body CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":21 238 intcode_body CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":23 23A intcode_body CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":25 23C intcode_body CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":27 23E intcode_body CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":29 240 intcode_body CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":915 27A cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":917 27A cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":920 27A cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":943 27A cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":944 27E cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":945 280 cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":946 280 cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":947 282 cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":948 284 cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":951 286 cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":952 28A cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":953 28C cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":954 28C cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":955 28E cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":956 290 cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":962 292 cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":963 292 cinit CODE
-"C:\Users\rolfes\AppData\Local\Temp\sn7s.":964 294 cinit CODE
-"C:\Program Files (x86)\Microchip\xc8\v1.32\include\pic18f4550.h":4563 298 text0 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":73 298 text0 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":75 298 text0 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":76 29C text0 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":77 2A0 text0 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":62 2A2 text1 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":64 2A2 text1 CODE
-"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":65 2A4 text1 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":36 5C intcodelo CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":38 64 intcodelo CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":39 66 intcodelo CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":40 7A intcodelo CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":42 94 intcodelo CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":44 9C intcodelo CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":45 9E intcodelo CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":46 B2 intcodelo CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":48 CC intcodelo CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":55 116 text3 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":57 120 text3 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":55 138 text3 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":59 140 text3 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":61 14A text3 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":59 162 text3 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":63 16A text3 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":65 174 text3 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":63 188 text3 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":67 190 text3 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":68 194 text3 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":71 198 text3 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":20 19A intcode_body CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":22 1CC intcode_body CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":24 1D4 intcode_body CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":27 1D6 intcode_body CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":29 1DE intcode_body CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":31 1E2 intcode_body CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":13 21C text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":14 224 text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":15 228 text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":16 230 text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":18 238 text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":19 23C text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":20 244 text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":21 24C text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":22 254 text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":23 256 text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":24 25C text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":22 25E text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":27 262 text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":28 26E text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":29 276 text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":30 27C text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":32 280 text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":33 286 text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":34 28E text13 CODE
+"E:\Microchip\xc8\v1.21\sources\common\awmod.c":35 296 text13 CODE
+"C:\Users\rolfes\AppData\Local\Temp\s4ek.":925 298 cinit CODE
+"C:\Users\rolfes\AppData\Local\Temp\s4ek.":926 29C cinit CODE
+"C:\Users\rolfes\AppData\Local\Temp\s4ek.":928 29E cinit CODE
+"C:\Users\rolfes\AppData\Local\Temp\s4ek.":929 2A0 cinit CODE
+"C:\Users\rolfes\AppData\Local\Temp\s4ek.":930 2A2 cinit CODE
+"C:\Users\rolfes\AppData\Local\Temp\s4ek.":933 2A4 cinit CODE
+"C:\Users\rolfes\AppData\Local\Temp\s4ek.":934 2A8 cinit CODE
+"C:\Users\rolfes\AppData\Local\Temp\s4ek.":936 2AA cinit CODE
+"C:\Users\rolfes\AppData\Local\Temp\s4ek.":937 2AC cinit CODE
+"C:\Users\rolfes\AppData\Local\Temp\s4ek.":938 2AE cinit CODE
+"C:\Users\rolfes\AppData\Local\Temp\s4ek.":945 2B0 cinit CODE
+"C:\Users\rolfes\AppData\Local\Temp\s4ek.":946 2B2 cinit CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":92 2B6 text5 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":93 2BA text5 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":94 2BE text5 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":95 2C2 text5 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":96 2C6 text5 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":97 2CA text5 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":98 2CE text5 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":53 2D0 text8 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":56 2D8 text8 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":57 2DA text8 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":58 2DE text8 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":59 2E0 text8 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":60 2E2 text8 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":79 2E4 text0 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":80 2E8 text0 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":81 2EC text0 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\main.c":82 2F0 text0 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":77 2F2 text7 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":78 2F4 text7 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":79 2F6 text7 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":80 2F8 text7 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":81 2FA text7 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":36 2FC text9 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":40 300 text9 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":41 302 text9 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":42 304 text9 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":16 306 text10 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":17 308 text10 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":18 30A text10 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":19 30C text10 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":20 30E text10 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":85 310 text6 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":86 312 text6 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":87 314 text6 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":88 316 text6 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":5 318 text4 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":6 31A text4 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":7 31C text4 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":10 31E text11 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":11 320 text11 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":12 322 text11 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":67 324 text1 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":68 326 text1 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":45 328 text2 CODE
+"C:\Users\rolfes\Documents\GitHub\TetrisTable\Tetris.X\setupFunctions.c":46 32A text2 CODE
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -161,17 +197,14 @@ $dist/default/production\Tetris.X.production.obj
 %SYMTAB
 __S0 30000E 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __S1 1C8 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-__S2 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __Hintentry 0 0 ABS 0 intentry dist/default/production\Tetris.X.production.obj
 __Lintentry 0 0 ABS 0 intentry dist/default/production\Tetris.X.production.obj
 _TMR2 FCC 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 _block_coding 100 0 BANK1 1 bssBANK1 dist/default/production\Tetris.X.production.obj
-setup@index_192 5A 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
-_main 298 0 CODE 0 text0 dist/default/production\Tetris.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
-start 106 0 CODE 0 init C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
-_TMR1H FCF 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-_TMR1L FCE 0 ABS 0 - dist/default/production\Tetris.X.production.obj
+_main 2E4 0 CODE 0 text0 dist/default/production\Tetris.X.production.obj
+start 112 0 CODE 0 init C:\Users\rolfes\AppData\Local\Temp\s4ek.obj
+__size_of_tmr2Off 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
+__end_of_setInterruptPriority 310 0 CODE 0 text10 dist/default/production\Tetris.X.production.obj
 _TRISB F93 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 _TRISD F95 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 _PORTB F81 0 ABS 0 - dist/default/production\Tetris.X.production.obj
@@ -180,8 +213,9 @@ __Lirdata 0 0 CODE 0 irdata dist/default/production\Tetris.X.production.obj
 __HRAM 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 _PORTD F83 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __LRAM 1 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-_T1CON FCD 0 ABS 0 - dist/default/production\Tetris.X.production.obj
+_T0CON FD5 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 _T2CON FCA 0 ABS 0 - dist/default/production\Tetris.X.production.obj
+__end_of_tmr0On 32C 0 CODE 0 text2 dist/default/production\Tetris.X.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\Tetris.X.production.obj
 __Lconfig 300000 0 CONFIG 0 config dist/default/production\Tetris.X.production.obj
 ?___awmod 34 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
@@ -200,7 +234,8 @@ __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __Lbss 0 0 RAM 1 bss dist/default/production\Tetris.X.production.obj
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\Tetris.X.production.obj
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\Tetris.X.production.obj
-_setup 19A 0 CODE 0 text2 dist/default/production\Tetris.X.production.obj
+_setup 116 0 CODE 0 text3 dist/default/production\Tetris.X.production.obj
+__end_of_interrupt_setup 2D0 0 CODE 0 text5 dist/default/production\Tetris.X.production.obj
 __size_of_high_interrupt 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 _PIE1bits F9D 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Tetris.X.production.obj
@@ -224,7 +259,7 @@ __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Tetris.X.pr
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Tetris.X.production.obj
 __Hfarbss 0 0 FARRAM 0 farbss dist/default/production\Tetris.X.production.obj
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Tetris.X.production.obj
-__Hintcode 18 0 CODE 0 intcode dist/default/production\Tetris.X.production.obj
+__Hintcode 14 0 CODE 0 intcode dist/default/production\Tetris.X.production.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production\Tetris.X.production.obj
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\Tetris.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\Tetris.X.production.obj
@@ -232,41 +267,48 @@ __pintcode 8 0 CODE 0 intcode dist/default/production\Tetris.X.production.obj
 _OSCCON FD3 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __Habs1 0 0 ABS 0 abs1 dist/default/production\Tetris.X.production.obj
 __Labs1 0 0 ABS 0 abs1 dist/default/production\Tetris.X.production.obj
+__size_of_setInterruptPriority 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Tetris.X.production.obj
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Tetris.X.production.obj
+__size_of_tmr0On 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __CFG_PBADEN$OFF 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-_tmr2On 2A2 0 CODE 0 text1 dist/default/production\Tetris.X.production.obj
-__end_of_high_interrupt 27A 0 CODE 0 intcode_body dist/default/production\Tetris.X.production.obj
-__end_of___awmod 19A 0 CODE 0 text4 dist/default/production\Tetris.X.production.obj
+_INT0IntSetup 310 0 CODE 0 text6 dist/default/production\Tetris.X.production.obj
+_tmr0On 328 0 CODE 0 text2 dist/default/production\Tetris.X.production.obj
+setup@index_201 5E 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
+__end_of_high_interrupt 21C 0 CODE 0 intcode_body dist/default/production\Tetris.X.production.obj
+__end_of___awmod 298 0 CODE 0 text13 dist/default/production\Tetris.X.production.obj
 __Hdata 0 0 ABS 0 data dist/default/production\Tetris.X.production.obj
 __Ldata 0 0 ABS 0 data dist/default/production\Tetris.X.production.obj
-stackhi 7FF 0 ABS 0 - C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
-__end_of_tmr2On 2A6 0 CODE 0 text1 dist/default/production\Tetris.X.production.obj
 __CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-___awmod@sign 39 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
+___awmod@sign 3A 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
 __Htemp 0 0 COMRAM 1 temp dist/default/production\Tetris.X.production.obj
 __Ltemp 0 0 COMRAM 1 temp dist/default/production\Tetris.X.production.obj
-stacklo 1C8 0 ABS 0 - C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
 __Hrbit 0 0 COMRAM 1 rbit dist/default/production\Tetris.X.production.obj
 __Lrbit 0 0 COMRAM 1 rbit dist/default/production\Tetris.X.production.obj
-__Hinit 106 0 CODE 0 init dist/default/production\Tetris.X.production.obj
-__Linit 106 0 CODE 0 init dist/default/production\Tetris.X.production.obj
-__Hintcodelo 106 0 CODE 0 intcodelo dist/default/production\Tetris.X.production.obj
+__Hinit 112 0 CODE 0 init dist/default/production\Tetris.X.production.obj
+__Linit 112 0 CODE 0 init dist/default/production\Tetris.X.production.obj
+__Hintcodelo 112 0 CODE 0 intcodelo dist/default/production\Tetris.X.production.obj
 __Lintcodelo 18 0 CODE 0 intcodelo dist/default/production\Tetris.X.production.obj
 __Hrbss 0 0 COMRAM 1 rbss dist/default/production\Tetris.X.production.obj
-__end_of_main 2A2 0 CODE 0 text0 dist/default/production\Tetris.X.production.obj
+__end_of_main 2F2 0 CODE 0 text0 dist/default/production\Tetris.X.production.obj
 __Lrbss 0 0 COMRAM 1 rbss dist/default/production\Tetris.X.production.obj
 __pintcodelo 18 0 CODE 0 intcodelo dist/default/production\Tetris.X.production.obj
+__size_of_portBIntSetup 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __Htext 0 0 ABS 0 text dist/default/production\Tetris.X.production.obj
 __Ltext 0 0 ABS 0 text dist/default/production\Tetris.X.production.obj
-end_of_initialization 292 0 CODE 0 cinit dist/default/production\Tetris.X.production.obj
+end_of_initialization 2B0 0 CODE 0 cinit dist/default/production\Tetris.X.production.obj
+__size_of_disableInterrupts 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __CFG_FOSC$ECPLLIO_EC 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-_T1CONbits FCD 0 ABS 0 - dist/default/production\Tetris.X.production.obj
+__size_of_interrupt_setup 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
+__size_of_enableInterrupts 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
+_T0CONbits FD5 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 _T2CONbits FCA 0 ABS 0 - dist/default/production\Tetris.X.production.obj
+_tmr0Setup 2FC 0 CODE 0 text9 dist/default/production\Tetris.X.production.obj
+_tmr2Setup 2D0 0 CODE 0 text8 dist/default/production\Tetris.X.production.obj
+_interrupt_setup 2B6 0 CODE 0 text5 dist/default/production\Tetris.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Tetris.X.production.obj
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\Tetris.X.production.obj
 _OSCTUNE F9B 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-setup@index_193 5B 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\Tetris.X.production.obj
 __Lifardata 0 0 CODE 0 ifardata dist/default/production\Tetris.X.production.obj
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\Tetris.X.production.obj
@@ -282,8 +324,8 @@ __Hbank4 0 0 ABS 0 bank4 dist/default/production\Tetris.X.production.obj
 __Lbank4 0 0 ABS 0 bank4 dist/default/production\Tetris.X.production.obj
 __Hbank5 0 0 ABS 0 bank5 dist/default/production\Tetris.X.production.obj
 __Lbank5 0 0 ABS 0 bank5 dist/default/production\Tetris.X.production.obj
-__Hpowerup 106 0 CODE 0 powerup dist/default/production\Tetris.X.production.obj
-__Lpowerup 106 0 CODE 0 powerup dist/default/production\Tetris.X.production.obj
+__Hpowerup 112 0 CODE 0 powerup dist/default/production\Tetris.X.production.obj
+__Lpowerup 112 0 CODE 0 powerup dist/default/production\Tetris.X.production.obj
 __Hbank6 0 0 ABS 0 bank6 dist/default/production\Tetris.X.production.obj
 __Lbank6 0 0 ABS 0 bank6 dist/default/production\Tetris.X.production.obj
 __Hbank7 0 0 ABS 0 bank7 dist/default/production\Tetris.X.production.obj
@@ -291,24 +333,48 @@ __Lbank7 0 0 ABS 0 bank7 dist/default/production\Tetris.X.production.obj
 __Htext0 0 0 ABS 0 text0 dist/default/production\Tetris.X.production.obj
 __Ltext0 0 0 ABS 0 text0 dist/default/production\Tetris.X.production.obj
 _low_interrupt 18 0 CODE 0 intcodelo dist/default/production\Tetris.X.production.obj
+__size_of_tmr0Setup 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __Htext1 0 0 ABS 0 text1 dist/default/production\Tetris.X.production.obj
 __Ltext1 0 0 ABS 0 text1 dist/default/production\Tetris.X.production.obj
-__ptext0 298 0 CODE 0 text0 dist/default/production\Tetris.X.production.obj
+__ptext0 2E4 0 CODE 0 text0 dist/default/production\Tetris.X.production.obj
 _INTCON2bits FF1 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __Htext2 0 0 ABS 0 text2 dist/default/production\Tetris.X.production.obj
 __Ltext2 0 0 ABS 0 text2 dist/default/production\Tetris.X.production.obj
-__ptext1 2A2 0 CODE 0 text1 dist/default/production\Tetris.X.production.obj
-__ptext2 19A 0 CODE 0 text2 dist/default/production\Tetris.X.production.obj
+__ptext1 324 0 CODE 0 text1 dist/default/production\Tetris.X.production.obj
+__Htext3 0 0 ABS 0 text3 dist/default/production\Tetris.X.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/production\Tetris.X.production.obj
+__ptext2 328 0 CODE 0 text2 dist/default/production\Tetris.X.production.obj
 __Htext4 0 0 ABS 0 text4 dist/default/production\Tetris.X.production.obj
 __Ltext4 0 0 ABS 0 text4 dist/default/production\Tetris.X.production.obj
-__ptext4 10A 0 CODE 0 text4 dist/default/production\Tetris.X.production.obj
+__ptext3 116 0 CODE 0 text3 dist/default/production\Tetris.X.production.obj
+__Htext5 0 0 ABS 0 text5 dist/default/production\Tetris.X.production.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/production\Tetris.X.production.obj
+__ptext4 318 0 CODE 0 text4 dist/default/production\Tetris.X.production.obj
+__Htext6 0 0 ABS 0 text6 dist/default/production\Tetris.X.production.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/production\Tetris.X.production.obj
+__ptext5 2B6 0 CODE 0 text5 dist/default/production\Tetris.X.production.obj
+__Htext7 0 0 ABS 0 text7 dist/default/production\Tetris.X.production.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/production\Tetris.X.production.obj
+__ptext6 310 0 CODE 0 text6 dist/default/production\Tetris.X.production.obj
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Tetris.X.production.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Tetris.X.production.obj
+__Htext8 0 0 ABS 0 text8 dist/default/production\Tetris.X.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/production\Tetris.X.production.obj
+__ptext7 2F2 0 CODE 0 text7 dist/default/production\Tetris.X.production.obj
 __pbssCOMRAM 1 0 COMRAM 1 bssCOMRAM dist/default/production\Tetris.X.production.obj
+__Htext9 0 0 ABS 0 text9 dist/default/production\Tetris.X.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/production\Tetris.X.production.obj
+__ptext8 2D0 0 CODE 0 text8 dist/default/production\Tetris.X.production.obj
+__ptext9 2FC 0 CODE 0 text9 dist/default/production\Tetris.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\Tetris.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\Tetris.X.production.obj
-__end_of__initialization 292 0 CODE 0 cinit dist/default/production\Tetris.X.production.obj
+__size_of_INT0IntSetup 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
+__end_of__initialization 2B0 0 CODE 0 cinit dist/default/production\Tetris.X.production.obj
 __CFG_USBDIV$2 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
+_portBIntSetup 2F2 0 CODE 0 text7 dist/default/production\Tetris.X.production.obj
+_tmr2Off 324 0 CODE 0 text1 dist/default/production\Tetris.X.production.obj
+__end_of_tmr0Setup 306 0 CODE 0 text9 dist/default/production\Tetris.X.production.obj
+__end_of_INT0IntSetup 318 0 CODE 0 text6 dist/default/production\Tetris.X.production.obj
 __Hidata 0 0 CODE 0 idata dist/default/production\Tetris.X.production.obj
 __Lidata 0 0 CODE 0 idata dist/default/production\Tetris.X.production.obj
 __Hrdata 0 0 COMRAM 1 rdata dist/default/production\Tetris.X.production.obj
@@ -316,83 +382,84 @@ __Lrdata 0 0 COMRAM 1 rdata dist/default/production\Tetris.X.production.obj
 __Hidloc 200008 0 IDLOC 0 idloc dist/default/production\Tetris.X.production.obj
 __Lidloc 200000 0 IDLOC 0 idloc dist/default/production\Tetris.X.production.obj
 __CFG_PLLDIV$12 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-__Hstack 0 0 STACK 2 stack dist/default/production\Tetris.X.production.obj
-__Lstack 0 0 STACK 2 stack dist/default/production\Tetris.X.production.obj
-int_func 20A 0 CODE 0 intcode_body dist/default/production\Tetris.X.production.obj
-___awmod 10A 0 CODE 0 text4 dist/default/production\Tetris.X.production.obj
+int_func 19A 0 CODE 0 intcode_body dist/default/production\Tetris.X.production.obj
+___awmod 21C 0 CODE 0 text13 dist/default/production\Tetris.X.production.obj
 __Hparam 0 0 ABS 0 rparam dist/default/production\Tetris.X.production.obj
 __Lparam 0 0 ABS 0 rparam dist/default/production\Tetris.X.production.obj
 _current_height 1 0 COMRAM 1 bssCOMRAM dist/default/production\Tetris.X.production.obj
-__Hspace_0 30000E 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Tetris.X.production.obj
-__Lspace_0 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Tetris.X.production.obj
 _b_value 29 0 COMRAM 1 bssCOMRAM dist/default/production\Tetris.X.production.obj
 __CFG_IESO$ON 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __pcstackCOMRAM 34 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
-__size_of_tmr2On 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-__Hspace_1 1C8 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-__Lspace_1 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __size_of_setup 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\Tetris.X.production.obj
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\Tetris.X.production.obj
-__Hspace_2 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-__Lspace_2 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\Tetris.X.production.obj
 __Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\Tetris.X.production.obj
 __Hcinit 0 0 ABS 0 cinit dist/default/production\Tetris.X.production.obj
 __Lcinit 0 0 ABS 0 cinit dist/default/production\Tetris.X.production.obj
-__pcinit 27A 0 CODE 0 cinit dist/default/production\Tetris.X.production.obj
-__ramtop 800 0 RAM 0 ramtop C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
+__pcinit 298 0 CODE 0 cinit dist/default/production\Tetris.X.production.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\rolfes\AppData\Local\Temp\s4ek.obj
+setup@index_202 5F 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\rolfes\AppData\Local\Temp\s4ek.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __Hconst 0 0 CODE 0 const dist/default/production\Tetris.X.production.obj
 __Lconst 0 0 CODE 0 const dist/default/production\Tetris.X.production.obj
+__end_of_disableInterrupts 324 0 CODE 0 text11 dist/default/production\Tetris.X.production.obj
+_enableInterrupts 318 0 CODE 0 text4 dist/default/production\Tetris.X.production.obj
 __CFG_PWRT$ON 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
+_disableInterrupts 31E 0 CODE 0 text11 dist/default/production\Tetris.X.production.obj
 __HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\Tetris.X.production.obj
 __LbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\Tetris.X.production.obj
+__end_of_tmr2Setup 2E4 0 CODE 0 text8 dist/default/production\Tetris.X.production.obj
 __pbssBANK1 100 0 BANK1 1 bssBANK1 dist/default/production\Tetris.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
+__Htext10 0 0 ABS 0 text10 dist/default/production\Tetris.X.production.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/production\Tetris.X.production.obj
+__ptext10 306 0 CODE 0 text10 dist/default/production\Tetris.X.production.obj
+__Htext11 0 0 ABS 0 text11 dist/default/production\Tetris.X.production.obj
+__Ltext11 0 0 ABS 0 text11 dist/default/production\Tetris.X.production.obj
+__ptext11 31E 0 CODE 0 text11 dist/default/production\Tetris.X.production.obj
+__end_of_tmr2Off 328 0 CODE 0 text1 dist/default/production\Tetris.X.production.obj
+__Htext13 0 0 ABS 0 text13 dist/default/production\Tetris.X.production.obj
+__Ltext13 0 0 ABS 0 text13 dist/default/production\Tetris.X.production.obj
+__ptext13 21C 0 CODE 0 text13 dist/default/production\Tetris.X.production.obj
 ___awmod@divisor 36 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
 _INTCONbits FF2 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-__end_of_low_interrupt 106 0 CODE 0 intcodelo dist/default/production\Tetris.X.production.obj
-setup@index 59 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
-__Hend_init 10A 0 CODE 0 end_init dist/default/production\Tetris.X.production.obj
-__Lend_init 106 0 CODE 0 end_init dist/default/production\Tetris.X.production.obj
-__end_of_setup 20A 0 CODE 0 text2 dist/default/production\Tetris.X.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
+__end_of_low_interrupt 112 0 CODE 0 intcodelo dist/default/production\Tetris.X.production.obj
+setup@index 5D 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
+__Hend_init 116 0 CODE 0 end_init dist/default/production\Tetris.X.production.obj
+__Lend_init 112 0 CODE 0 end_init dist/default/production\Tetris.X.production.obj
+__size_of_tmr2Setup 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
+__end_of_setup 19A 0 CODE 0 text3 dist/default/production\Tetris.X.production.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\rolfes\AppData\Local\Temp\s4ek.obj
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\Tetris.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Tetris.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
+__accesstop 60 0 ABS 0 - C:\Users\rolfes\AppData\Local\Temp\s4ek.obj
+__end_of_portBIntSetup 2FC 0 CODE 0 text7 dist/default/production\Tetris.X.production.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\Tetris.X.production.obj
 __Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\Tetris.X.production.obj
-__pintcode_body 20A 0 CODE 0 intcode_body dist/default/production\Tetris.X.production.obj
-intlevel0 0 0 CODE 0 text C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
-intlevel1 0 0 CODE 0 text C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
-intlevel2 0 0 CODE 0 text C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
-intlevel3 0 0 CODE 0 text C:\Users\rolfes\AppData\Local\Temp\sn7s.obj
+__pintcode_body 19A 0 CODE 0 intcode_body dist/default/production\Tetris.X.production.obj
+intlevel0 0 0 CODE 0 text C:\Users\rolfes\AppData\Local\Temp\s4ek.obj
+intlevel1 0 0 CODE 0 text C:\Users\rolfes\AppData\Local\Temp\s4ek.obj
+intlevel2 0 0 CODE 0 text C:\Users\rolfes\AppData\Local\Temp\s4ek.obj
+intlevel3 0 0 CODE 0 text C:\Users\rolfes\AppData\Local\Temp\s4ek.obj
 _high_interrupt 8 0 CODE 0 intcode dist/default/production\Tetris.X.production.obj
-start_initialization 27A 0 CODE 0 cinit dist/default/production\Tetris.X.production.obj
+__end_of_enableInterrupts 31E 0 CODE 0 text4 dist/default/production\Tetris.X.production.obj
+start_initialization 298 0 CODE 0 cinit dist/default/production\Tetris.X.production.obj
 __size_of_low_interrupt 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __size_of___awmod 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-__initialization 27A 0 CODE 0 cinit dist/default/production\Tetris.X.production.obj
+__initialization 298 0 CODE 0 cinit dist/default/production\Tetris.X.production.obj
 ___awmod@dividend 34 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
 __CFG_BOR$OFF 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __activetblptr 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-___awmod@counter 38 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
+tmr2Setup@t2con 5B 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
+___awmod@counter 39 0 COMRAM 1 cstackCOMRAM dist/default/production\Tetris.X.production.obj
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
-# %SPLITSTAB Section
-# This section enumerates all the psect splits performed by the assembler.
-# The beginning of the section is indicated by %SPLITSTAB.
-# Each line is a record a particular split, where the parent psect in on
-# the left and the child on the right.  Note that a child psect is always
-# split form the top of the parent psect. All splits from a given parent
-# are listed in the order in which they occurred.
-%SPLITSTAB
+_setInterruptPriority 306 0 CODE 0 text10 dist/default/production\Tetris.X.production.obj
 # %DABS Section
 # This section contains a table of all usuage of the assember
 # directive DABS in the program. Each line has the following format:
@@ -404,15 +471,15 @@ __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Tetris.X.production.obj
 # %SEGMENTS Section
 # This sections enumerates the segments of the program.  Each segment
 # is described on a single line as follows:
-#    <name> <space> <link address> <file address> <size> <delta>
+#    <name> <space> <link address> <file address> <size> <delta> <class name>
 # Addresses and size are in unqualified hexadecimal.  The link address
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-reset_vec 0 0 0 4 1
-intcode 0 8 8 10 1
-intcodelo 0 18 18 28E 1
-config 0 300000 300000 E 1
-idloc 0 200000 200000 8 1
-bssCOMRAM 1 1 1 5B 1
-bssBANK1 1 100 100 C8 1
+reset_vec 0 0 0 4 1 CODE
+intcode 0 8 8 C 1 CODE
+intcodelo 0 18 18 314 1 CODE
+config 0 300000 300000 E 1 CONFIG
+idloc 0 200000 200000 8 1 IDLOC
+bssCOMRAM 1 1 1 5F 1 COMRAM
+bssBANK1 1 100 100 C8 1 BANK1

@@ -2,7 +2,7 @@
 
 void enableInterrupts(void)
 {
-    INTCONbits.GIE =1;
+    INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
 }
 void disableInterrupts(void)
@@ -27,45 +27,25 @@ void clockSetup(void)
 
 void pinSetup(void)
 {
-    TRISB = 0x00;
+    TRISB = 0xff;
+    TRISD = 0x00;
 }
 
-void tmr1Setup(void)
+void tmr0Setup(void)
 {
-    char t1con = 0x00;
-    t1con = t1con | 0xC0; // 16 bit mode, Timer1 Osc
-    t1con = t1con | 0x08; //TImer1 Oscilaltor on, not enabled
-    TMR1H = 0;
-    TMR1L = 0;
-    T1CON = t1con;
-    PIR1bits.TMR1IF = 0;
-    PIE1bits.TMR1IE = 1;
+    T0CON = 0x05; // 16 bit mode, off, 64 bit pre-scaler
+    TMR0H = 0x6D;
+    TMR0L = 0x84;
+    INTCONbits.TMR0IF = 0;
+    INTCONbits.TMR0IE = 1;
 }
-inline void tmr1On(void)
+inline void tmr0On(void)
 {
-    T1CONbits.TMR1ON = 1;
+    T0CONbits.TMR0ON = 1;
 }
-inline void tmr1Off(void)
+inline void tmr0Off(void)
 {
-    T1CONbits.TMR1ON = 0;
-}
-void tmr2Setup(void)
-{
-    char t2con = 0x00;
-    t2con = t2con | 0x00; // Postscale is:
-    t2con = t2con | 0x00; //Timer2 off, Prescaler:
-    TMR2 = 255;
-    T2CON = t2con;
-    PIR1bits.TMR2IF = 0;
-    PIE1bits.TMR2IE = 1;
-}
-inline void tmr2On(void)
-{
-    T2CONbits.TMR2ON = 1;
-}
-inline void tmr2Off(void)
-{
-    T2CONbits.TMR2ON = 0;
+    T0CONbits.TMR0ON = 0;
 }
 // PORTB:
 // RB7: Move Piece Left
@@ -92,8 +72,7 @@ void interrupt_setup(void)
 {
     disableInterrupts();
     setInterruptPriority();
-    tmr1Setup();
-    tmr2Setup();
+    tmr0Setup();
     portBIntSetup();
     INT0IntSetup();
 }

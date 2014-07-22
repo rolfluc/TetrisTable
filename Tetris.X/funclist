@@ -1,8 +1,16 @@
-_high_interrupt: CODE, 8 0 626
-___awmod: CODE, 266 0 144
-_tmr2On: CODE, 674 0 4
-_main: CODE, 664 0 10
-__initialization: CODE, 634 0 24
-_low_interrupt: CODE, 24 0 238
-_setup: CODE, 410 0 112
-Total: 1158
+_setInterruptPriority: CODE, 770 0 10
+_tmr0On: CODE, 800 0 4
+_interrupt_setup: CODE, 698 0 22
+_high_interrupt: CODE, 8 0 404
+___awmod: CODE, 544 0 124
+_main: CODE, 750 0 10
+__initialization: CODE, 668 0 24
+_reset_T0: CODE, 738 0 12
+_tmr0Setup: CODE, 720 0 18
+_INT0IntSetup: CODE, 780 0 8
+_disableInterrupts: CODE, 794 0 6
+_low_interrupt: CODE, 24 0 250
+_setup: CODE, 412 0 132
+_portBIntSetup: CODE, 760 0 10
+_enableInterrupts: CODE, 788 0 6
+Total: 1040

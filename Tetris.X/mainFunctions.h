@@ -16,6 +16,7 @@ extern "C" {
 
     void send_board(void);
     void wait(uint16_t wait_time);
+    inline void reset_T0(void);
 
 
 #ifdef	__cplusplus

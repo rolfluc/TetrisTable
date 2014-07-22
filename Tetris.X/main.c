@@ -18,13 +18,10 @@ uint8_t b_buf_ptr = 0;
 
 void interrupt high_interrupt(void)
 {
-    if (PIR1bits.TMR1IF == 1)
+    //Timer1 Updates the board every 100ms, Loads button buffer every 50ms
+    if (INTCONbits.TMR0IF == 1)
     {
-        PIR1bits.TMR1IF = 0;
-    }
-    if (PIR1bits.TMR2IF == 1)
-    {
-        PIR1bits.TMR2IF = 0;
+        reset_T0();
     }
 }
 
@@ -62,6 +59,8 @@ void setup(void)
     {
         b_value[index] = 0;
     }
+    interrupt_setup();
+    enableInterrupts();
     //clockSetup();
     //pinSetup();
 }
@@ -73,7 +72,7 @@ void setup(void)
 void main(void)
 {
     setup();
-    tmr2On();
+    tmr0On();
     while(1)
     {
         //send_board();
@@ -114,4 +113,11 @@ void send_board()
     uint16_t wait_time = 266;
     while (wait_time) wait_time--;
     enableInterrupts();
+}
+
+inline void reset_T0(void)
+{
+    TMR0H = 0x6D;
+    TMR0L = 0x84;
+    INTCONbits.TMR0IF = 0;
 }

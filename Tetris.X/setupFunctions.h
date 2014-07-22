@@ -16,12 +16,9 @@ extern "C" {
     void pinSetup(void);
     void INT0IntSetup(void);
     void interrupt_setup(void);
-    inline void tmr2Off(void);
-    inline void tmr2On(void);
-    void tmr2Setup(void);
-    inline void tmr1Off(void);
-    inline void tmr1On(void);
-    void tmr1Setup(void);
+    inline void tmr0Off(void);
+    inline void tmr0On(void);
+    void tmr0Setup(void);
     void enableInterrupts(void);
     void disableInterrupts(void);
     void setInterruptPriority(void);
