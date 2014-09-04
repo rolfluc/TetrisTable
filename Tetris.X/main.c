@@ -16,6 +16,8 @@ uint32_t current_height[HEIGHT_OF_BOARD];
 uint8_t b_value[PORTB_BUFFER_LENGTH];
 uint8_t b_buf_ptr = 0;
 
+
+//High Priority is for timers
 void interrupt high_interrupt(void)
 {
     //Timer1 Updates the board every 100ms, Loads button buffer every 50ms
@@ -25,15 +27,20 @@ void interrupt high_interrupt(void)
     }
 }
 
-
+//Low Priority is for button presses.
 void interrupt low_priority low_interrupt(void)
 {
+    // <7> = Left
+    // <6> = Right
+    // <5> = Clockwise
+    // <4> = Counter-Clockwise
     if (INTCONbits.RBIF == 1)
     {
         INTCONbits.RBIF = 0;
         b_value[b_buf_ptr] = PORTB;
         b_buf_ptr = ++b_buf_ptr % 10;
     }
+    //INT0IF Drop Down space
     if (INTCONbits.INT0IF == 1)
     {
         INTCONbits.INT0IF = 0;
