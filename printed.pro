@@ -1,5 +1,5 @@
-update=8/30/2014 12:58:29 PM
-last_client=eeschema
+update=9/8/2014 11:23:27 PM
+last_client=cvpcb
 [eeschema]
 version=1
 LibDir=
@@ -39,3 +39,25 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
+[pcbnew]
+[pcbnew/libraries]
+LibName1=led
+LibName2=sockets
+LibName3=connect
+LibName4=discret
+LibName5=pin_array
+LibName6=divers
+LibName7=smd_capacitors
+LibName8=smd_resistors
+LibName9=smd_crystal&oscillator
+LibName10=smd_dil
+LibName11=smd_transistors
+LibName12=libcms
+LibName13=display
+LibName14=dip_sockets
+LibName15=pga_sockets
+LibName16=valves
+LibDir=
+[cvpcb]
+version=1
+NetIExt=net
