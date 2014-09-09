@@ -3,9 +3,9 @@
   (general
     (links 16)
     (no_connects 16)
-    (area 158.725399 80.264799 178.942201 100.507001)
+    (area 154.37739 80.264799 179.324001 100.507001)
     (thickness 1.6)
-    (drawings 4)
+    (drawings 0)
     (tracks 0)
     (zones 0)
     (modules 8)
@@ -167,7 +167,7 @@
   )
 
   (module WS2812B (layer Front.Layer) (tedit 5408A142) (tstamp 540F6DEB)
-    (at 169.3164 86.8426)
+    (at 168.2877 86.9823)
     (descr "SMT 5050 WD2812")
     (path /53FFEF21)
     (fp_text reference LED3 (at 0 -2.8575) (layer F.SilkS)
@@ -259,7 +259,7 @@
   )
 
   (module WS2812B (layer Front.Layer) (tedit 5408A142) (tstamp 540F6F15)
-    (at 169.2656 93.1545)
+    (at 168.2877 93.2688)
     (descr "SMT 5050 WD2812")
     (path /53FFEF3F)
     (fp_text reference LED4 (at 0 -2.8575) (layer F.SilkS)
@@ -305,7 +305,7 @@
   )
 
   (module 4P-Header (layer Front.Layer) (tedit 540F43F4) (tstamp 540F6EEC)
-    (at 158.1912 87.5665 90)
+    (at 158.3055 88.7349 90)
     (descr "Connecteur 4 pibs")
     (tags "CONN DEV")
     (path /540E8307)
@@ -340,7 +340,7 @@
   )
 
   (module 4P-Header (layer Front.Layer) (tedit 540F43F4) (tstamp 540F6EFB)
-    (at 177.6476 87.7316 90)
+    (at 175.7934 88.7349 90)
     (descr "Connecteur 4 pibs")
     (tags "CONN DEV")
     (path /540E8316)
@@ -375,7 +375,7 @@
   )
 
   (module 1pin (layer Front.Layer) (tedit 540F46F2) (tstamp 540F6EC0)
-    (at 165.9128 96.2787)
+    (at 158.3436 82.0674)
     (descr "Connecteurs 1 pin")
     (tags "CONN DEV")
     (path /540F1170)
@@ -396,7 +396,7 @@
   )
 
   (module 1pin (layer Front.Layer) (tedit 540F46F2) (tstamp 540F6EB6)
-    (at 174.2313 96.2279)
+    (at 175.7934 82.0674)
     (descr "Connecteurs 1 pin")
     (tags "CONN DEV")
     (path /540F118E)
@@ -415,10 +415,5 @@
       (net 1 N-000001)
     )
   )
-
-  (gr_line (start 158.7754 100.457) (end 158.7754 80.3656) (angle 90) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 178.8922 100.457) (end 158.7754 100.457) (angle 90) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 178.8922 80.3148) (end 178.8922 100.457) (angle 90) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 158.7754 80.3148) (end 178.8922 80.3148) (angle 90) (layer Edge.Cuts) (width 0.1))
 
 )
