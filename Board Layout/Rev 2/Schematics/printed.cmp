@@ -1,38 +1,38 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 10/31/2014 6:19:21 PM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 11/9/2014 11:36:18 PM
 
 BeginCmp
-TimeStamp = /53FFEF12;
-Reference = LED1;
-ValeurCmp = WS2812B;
-IdModule  = WS2812B;
-EndCmp
-
-BeginCmp
-TimeStamp = /53FFEF30;
-Reference = LED2;
-ValeurCmp = WS2812B;
-IdModule  = WS2812B;
-EndCmp
-
-BeginCmp
-TimeStamp = /53FFEF21;
-Reference = LED3;
-ValeurCmp = WS2812B;
-IdModule  = WS2812B;
-EndCmp
-
-BeginCmp
-TimeStamp = /53FFEF3F;
-Reference = LED4;
-ValeurCmp = WS2812B;
-IdModule  = WS2812B;
-EndCmp
-
-BeginCmp
-TimeStamp = /5453FECE;
+TimeStamp = /54604A35;
 Reference = P1;
 ValeurCmp = CONN_5X2;
 IdModule  = 10PSMTHdr;
+EndCmp
+
+BeginCmp
+TimeStamp = /54604751;
+Reference = U1;
+ValeurCmp = WS2812B;
+IdModule  = WS2812B;
+EndCmp
+
+BeginCmp
+TimeStamp = /5460476F;
+Reference = U2;
+ValeurCmp = WS2812B;
+IdModule  = WS2812B;
+EndCmp
+
+BeginCmp
+TimeStamp = /5460477E;
+Reference = U3;
+ValeurCmp = WS2812B;
+IdModule  = WS2812B;
+EndCmp
+
+BeginCmp
+TimeStamp = /54604760;
+Reference = U4;
+ValeurCmp = WS2812B;
+IdModule  = WS2812B;
 EndCmp
 
 EndListe
