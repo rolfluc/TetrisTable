@@ -1,0 +1,256 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "noname.sch"
+Date "21 jan 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L NPN Q1
+U 1 1 54BF3405
+P 6250 4250
+F 0 "Q1" H 6250 4100 50  0000 R CNN
+F 1 "NPN" H 6250 4400 50  0000 R CNN
+F 2 "~" H 6250 4250 60  0000 C CNN
+F 3 "~" H 6250 4250 60  0000 C CNN
+	1    6250 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L NPN Q2
+U 1 1 54BF3414
+P 6850 4250
+F 0 "Q2" H 6850 4100 50  0000 R CNN
+F 1 "NPN" H 6850 4400 50  0000 R CNN
+F 2 "~" H 6850 4250 60  0000 C CNN
+F 3 "~" H 6850 4250 60  0000 C CNN
+	1    6850 4250
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6150 4450
+$Comp
+L R R1
+U 1 1 54BF345A
+P 5700 3850
+F 0 "R1" V 5780 3850 40  0000 C CNN
+F 1 "4.7k" V 5707 3851 40  0000 C CNN
+F 2 "~" V 5630 3850 30  0000 C CNN
+F 3 "~" H 5700 3850 30  0000 C CNN
+	1    5700 3850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C1
+U 1 1 54BF3469
+P 7500 4250
+F 0 "C1" H 7500 4350 40  0000 L CNN
+F 1 "0.1uf" H 7506 4165 40  0000 L CNN
+F 2 "~" H 7538 4100 30  0000 C CNN
+F 3 "~" H 7500 4250 60  0000 C CNN
+	1    7500 4250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R2
+U 1 1 54BF3493
+P 7700 3750
+F 0 "R2" V 7780 3750 40  0000 C CNN
+F 1 "1.5M" V 7707 3751 40  0000 C CNN
+F 2 "~" V 7630 3750 30  0000 C CNN
+F 3 "~" H 7700 3750 30  0000 C CNN
+	1    7700 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 54BF34A2
+P 8100 3750
+F 0 "R3" V 8180 3750 40  0000 C CNN
+F 1 "10k" V 8107 3751 40  0000 C CNN
+F 2 "~" V 8030 3750 30  0000 C CNN
+F 3 "~" H 8100 3750 30  0000 C CNN
+	1    8100 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 54BF34FF
+P 6450 4700
+F 0 "C2" H 6450 4800 40  0000 L CNN
+F 1 "10uf" H 6456 4615 40  0000 L CNN
+F 2 "~" H 6488 4550 30  0000 C CNN
+F 3 "~" H 6450 4700 60  0000 C CNN
+	1    6450 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L NPN Q3
+U 1 1 54BF35DB
+P 7900 4250
+F 0 "Q3" H 7900 4100 50  0000 R CNN
+F 1 "NPN" H 7900 4400 50  0000 R CNN
+F 2 "~" H 7900 4250 60  0000 C CNN
+F 3 "~" H 7900 4250 60  0000 C CNN
+	1    7900 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 54BF3630
+P 8250 4400
+F 0 "R4" V 8330 4400 40  0000 C CNN
+F 1 "4.7k" V 8257 4401 40  0000 C CNN
+F 2 "~" V 8180 4400 30  0000 C CNN
+F 3 "~" H 8250 4400 30  0000 C CNN
+	1    8250 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 54BF3691
+P 6950 4800
+F 0 "#PWR01" H 6950 4800 30  0001 C CNN
+F 1 "GND" H 6950 4730 30  0001 C CNN
+F 2 "~" H 6950 4800 60  0000 C CNN
+F 3 "~" H 6950 4800 60  0000 C CNN
+	1    6950 4800
+	1    0    0    -1  
+$EndComp
+Connection ~ 6950 4700
+Wire Wire Line
+	8250 4150 8800 4150
+Wire Wire Line
+	8000 4650 8250 4650
+Wire Wire Line
+	8000 4450 8000 4650
+Connection ~ 8100 4050
+Wire Wire Line
+	8250 4050 8250 4150
+Wire Wire Line
+	8100 4050 8100 4000
+Wire Wire Line
+	8000 4050 8250 4050
+Wire Wire Line
+	6950 4450 8000 4450
+Connection ~ 5550 3500
+Connection ~ 5450 3850
+Wire Wire Line
+	5450 4700 6250 4700
+Connection ~ 7700 3500
+Wire Wire Line
+	5450 3500 5450 4700
+Wire Wire Line
+	5450 3500 8100 3500
+Wire Wire Line
+	7700 4250 7700 4000
+Wire Wire Line
+	7150 4250 7300 4250
+Connection ~ 6500 3850
+Wire Wire Line
+	7150 3850 7150 4250
+Connection ~ 6500 4000
+Wire Wire Line
+	5950 3850 7150 3850
+Wire Wire Line
+	6500 4000 6500 3850
+Wire Wire Line
+	6950 4700 6650 4700
+Wire Wire Line
+	6950 4450 6950 4800
+Wire Wire Line
+	6950 4000 6950 4050
+Wire Wire Line
+	6150 4000 6950 4000
+Wire Wire Line
+	6150 4050 6150 4000
+Wire Wire Line
+	6450 4250 6650 4250
+$Comp
+L CONN_1 P1
+U 1 1 54BF374D
+P 8950 4150
+F 0 "P1" H 9030 4150 40  0000 L CNN
+F 1 "CONN_1" H 8950 4205 30  0001 C CNN
+F 2 "" H 8950 4150 60  0000 C CNN
+F 3 "" H 8950 4150 60  0000 C CNN
+	1    8950 4150
+	1    0    0    -1  
+$EndComp
+Connection ~ 6450 4250
+Connection ~ 6650 4250
+$Comp
+L CONN_1 P3
+U 1 1 54BF3A79
+P 6950 4850
+F 0 "P3" H 7030 4850 40  0000 L CNN
+F 1 "CONN_1" H 6950 4905 30  0001 C CNN
+F 2 "" H 6950 4850 60  0000 C CNN
+F 3 "" H 6950 4850 60  0000 C CNN
+	1    6950 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_1 P2
+U 1 1 54BF3A88
+P 5650 3350
+F 0 "P2" H 5730 3350 40  0000 L CNN
+F 1 "CONN_1" H 5650 3405 30  0001 C CNN
+F 2 "" H 5650 3350 60  0000 C CNN
+F 3 "" H 5650 3350 60  0000 C CNN
+	1    5650 3350
+	0    -1   -1   0   
+$EndComp
+Connection ~ 5650 3500
+Connection ~ 7700 4250
+Connection ~ 7700 4000
+Connection ~ 8100 4000
+Connection ~ 8000 4050
+Connection ~ 8000 4450
+Connection ~ 8250 4150
+Connection ~ 8800 4150
+Connection ~ 8250 4650
+Connection ~ 6650 4700
+Connection ~ 6250 4700
+Connection ~ 5950 3850
+Connection ~ 6150 4050
+Connection ~ 6950 4050
+Connection ~ 6950 4450
+$EndSCHEMATC
