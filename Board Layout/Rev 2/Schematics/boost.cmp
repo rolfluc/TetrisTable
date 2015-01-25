@@ -1,0 +1,59 @@
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 1/24/2015 7:26:28 PM
+
+BeginCmp
+TimeStamp = /54C43582;
+Reference = C1;
+ValeurCmp = 4uF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /54C437D7;
+Reference = Clock1;
+ValeurCmp = CONN_1;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /54C43594;
+Reference = D1;
+ValeurCmp = DIODE;
+IdModule  = D4;
+EndCmp
+
+BeginCmp
+TimeStamp = /54C43804;
+Reference = Gnd1;
+ValeurCmp = CONN_1;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /54C435BA;
+Reference = L1;
+ValeurCmp = 600uH;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /54C4360A;
+Reference = Q1;
+ValeurCmp = MOSFET_N;
+IdModule  = 2n3904;
+EndCmp
+
+BeginCmp
+TimeStamp = /54C437E6;
+Reference = Vcc1;
+ValeurCmp = CONN_1;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /54C437F5;
+Reference = Vout1;
+ValeurCmp = CONN_1;
+IdModule  = 1pin;
+EndCmp
+
+EndListe
