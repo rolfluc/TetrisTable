@@ -1,4 +1,4 @@
-(module WS2812B (layer F.Cu) (tedit 55E13DC8)
+(module WS2812B (layer F.Cu) (tedit 55E149F6)
   (descr "SMT 5050 WD2812")
   (fp_text reference "" (at 0 -2.8575) (layer F.SilkS)
     (effects (font (size 0.20066 0.20066) (thickness 0.04064)))
